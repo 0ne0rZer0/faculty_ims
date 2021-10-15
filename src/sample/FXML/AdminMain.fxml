@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2000.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminMain">
+    <content>
+        <AnchorPane prefHeight="791.0" prefWidth="1286.0">
+            <children>
+                <AnchorPane fx:id="nameAnchorPane" prefHeight="148.0" prefWidth="2000.0" style="-fx-background-color: WHITE; -fx-background-radius: 10px;">
+                    <children>
+                        <Label alignment="CENTER" layoutX="388.0" layoutY="14.0" prefHeight="39.0" prefWidth="525.0" text="Sinhgad College of Engineering" textAlignment="CENTER">
+                            <font>
+                                <Font name="Roboto Bold" size="36.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="departmentName2" layoutX="1139.0" layoutY="118.0" prefHeight="20.0" prefWidth="133.0" text="Information Technology" textAlignment="CENTER">
+                            <font>
+                                <Font name="Roboto Bold" size="12.0" />
+                            </font>
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                        </Label>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="1070.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../res/administrator.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="1118.0" layoutY="90.0" prefHeight="27.0" prefWidth="154.0" text="Department Admin" textAlignment="CENTER">
+                            <font>
+                                <Font name="Roboto" size="18.0" />
+                            </font>
+                            <effect>
+                                <Blend />
+                            </effect>
+                            <padding>
+                                <Insets bottom="5.0" right="2.0" />
+                            </padding>
+                        </Label>
+                        <ImageView fitHeight="147.0" fitWidth="228.0" layoutX="-1.0" pickOnBounds="true">
+                            <image>
+                                <Image url="@../../res/sinhgad-technical-education.jpg" />
+                            </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="405.0" layoutY="50.0" prefHeight="49.0" prefWidth="480.0" text="Faculty Information Management System" textAlignment="CENTER" wrapText="true">
+                            <font>
+                                <Font name="Roboto Bold" size="21.0" />
+                            </font>
+                        </Label>
+                        <Separator layoutX="13.0" layoutY="146.0" prefHeight="0.0" prefWidth="2000.0" />
+                        <Label fx:id="departmentName" layoutX="485.0" layoutY="99.0" prefHeight="27.0" prefWidth="321.0" text="Department : Information Technology" textFill="#000000c9">
+                            <font>
+                                <Font name="Roboto Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <VBox fx:id="dashboardVbox" layoutX="-1.0" layoutY="148.0" onMouseClicked="#listDisable" prefHeight="947.0" prefWidth="232.0" style="-fx-background-color: linear-gradient(to right bottom, #0078fb, #008fff, #00a3ff, #00b6ff, #1bc7fe, #38ccfd, #4bd0fb, #5cd5fa, #4ccffb, #3ac9fd, #25c3fe, #00bdff);;">
+                    <children>
+                        <JFXButton fx:id="adminDashboardButton" buttonType="RAISED" onAction="#paneChange" prefHeight="55.0" prefWidth="236.0" text="Dashboard">
+                            <font>
+                                <Font name="Roboto" size="18.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="24.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../res/thin-1086_kpi_dashboard_monitor-512.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="adminReportButton" onAction="#paneChange" prefHeight="55.0" prefWidth="236.0" text="Report">
+                            <font>
+                                <Font name="Roboto" size="18.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="23.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../res/Document_black-512.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                  <JFXButton fx:id="adminSummaryButton" onAction="#paneChange" prefHeight="55.0" prefWidth="236.0" text="Summary">
+                     <font>
+                        <Font name="Roboto" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/img_420060.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="adminLogOutButton" onAction="#paneChange" prefHeight="55.0" prefWidth="236.0" text="Log Out">
+                     <font>
+                        <Font name="Roboto" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                    </children>
+                </VBox>
+                <Pane fx:id="dashboardPane" layoutX="232.0" layoutY="153.0" prefHeight="950.0" prefWidth="1280.0" AnchorPane.leftAnchor="232.0" AnchorPane.topAnchor="153.0">
+                    <children>
+                        <AnchorPane fx:id="innerAnchorPane" layoutX="-2.0" onMouseClicked="#listDisable" prefHeight="936.0" prefWidth="1280.0" style="-fx-background-color: #fff;">
+                            <children>
+                                <Pane fx:id="professorPane" layoutX="1.0" layoutY="-3.0" prefHeight="944.0" prefWidth="1037.0" style="-fx-background-color: background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);">
+                                    <children>
+                                        <AnchorPane fx:id="hboxAnchorPane" prefHeight="943.0" prefWidth="1026.0" style="-fx-background-color: #fff; -fx-background-radius: 10px;">
+                                            <children>
+                                    <TableView fx:id="commonTable" layoutX="34.0" layoutY="257.0" prefHeight="429.0" prefWidth="1014.0">
+                                      <columns>
+                                        <TableColumn fx:id="facultyName" prefWidth="250.0" text="Faculty Name" />
+                                        <TableColumn fx:id="department" prefWidth="190.0" text="Department" />
+                                          <TableColumn fx:id="tableEmail" minWidth="0.0" prefWidth="234.0" text="Email" />
+                                          <TableColumn fx:id="status" prefWidth="208.0" text="Designation" />
+                                          <TableColumn fx:id="currentDesignation" prefWidth="105.0" text="Status" />
+                                      </columns>
+                                    </TableView>
+                                            <ListView fx:id="searchList" layoutX="311.0" layoutY="82.0" prefHeight="132.0" prefWidth="382.0" style="-fx-background-color: background-image : linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12; -fx-background-radius: 10px;" />
+                                            <TextField fx:id="searchBox" alignment="CENTER" layoutX="309.0" layoutY="54.0" onKeyReleased="#search" prefHeight="28.0" prefWidth="386.0" promptText="Search" style="-fx-background-color: #EBECF0; -fx-background-radius: 10px;">
+                                                <font>
+                                                    <Font name="Arial" size="14.0" />
+                                                </font>
+                                            </TextField>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </Pane>
+                        <Pane fx:id="reportPane" prefHeight="935.0" prefWidth="1052.0">
+                           <children>
+                              <AnchorPane layoutX="-1.0" layoutY="-5.0" prefHeight="942.0" prefWidth="1090.0" style="-fx-background-color: #fff;">
+                                 <children>
+                                    <Label layoutX="102.0" layoutY="44.0" prefHeight="35.0" prefWidth="206.0" text="Academic Year :">
+                                       <font>
+                                          <Font name="Roboto" size="23.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXComboBox fx:id="academicYearFrom" layoutX="317.0" layoutY="46.0" prefHeight="30.0" prefWidth="104.0" promptText="From" />
+                                    <JFXComboBox fx:id="academicYearTo" layoutX="463.0" layoutY="47.0" prefHeight="30.0" prefWidth="104.0" promptText="To" />
+                                    <VBox fx:id="selectFormVbox" layoutX="102.0" layoutY="160.0" prefHeight="569.0" prefWidth="826.0" spacing="10.0">
+                                       <children>
+                                          <HBox fx:id="personalHbox" prefHeight="44.0" prefWidth="797.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px;">
+                                             <children>
+                                                <JFXHamburger fx:id="personalHamburger" onMouseClicked="#hamburgerChange" prefHeight="44.0" prefWidth="62.0" />
+                                                <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="41.0" prefWidth="724.0" text="Personal Information">
+                                                   <font>
+                                                      <Font name="Roboto" size="23.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <effect>
+                                                <DropShadow color="#4a4a4a" height="9.8" radius="4.51" width="10.24" />
+                                             </effect>
+                                          </HBox>
+                                          <HBox fx:id="educationalHbox" prefHeight="44.0" prefWidth="797.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+                                             <children>
+                                                <JFXHamburger fx:id="educationalHamburger" onMouseClicked="#hamburgerChange" prefHeight="44.0" prefWidth="66.0" />
+                                                <Label alignment="CENTER" prefHeight="41.0" prefWidth="741.0" text="Educational Information">
+                                                   <font>
+                                                      <Font name="Roboto" size="23.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <effect>
+                                                <DropShadow color="#4a4a4a" height="10.02" radius="4.5649999999999995" width="10.24" />
+                                             </effect>
+                                          </HBox>
+                                          <HBox fx:id="workingHbox" prefHeight="44.0" prefWidth="826.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+                                             <children>
+                                                <JFXHamburger fx:id="workingHamburger" onMouseClicked="#hamburgerChange" prefHeight="44.0" prefWidth="66.0" />
+                                                <Label alignment="CENTER" prefHeight="41.0" prefWidth="741.0" text="Working Experience">
+                                                   <font>
+                                                      <Font name="Roboto" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <effect>
+                                                <DropShadow color="#4a4a4a" height="10.02" radius="4.5649999999999995" width="10.24" />
+                                             </effect>
+                                          </HBox>
+                                          <HBox fx:id="sppuHbox" prefHeight="44.0" prefWidth="797.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+                                             <children>
+                                                <JFXHamburger fx:id="sppuHamburger" onMouseClicked="#hamburgerChange" prefHeight="44.0" prefWidth="66.0" />
+                                                <Label alignment="CENTER" prefHeight="41.0" prefWidth="741.0" text="SPPU Information">
+                                                   <font>
+                                                      <Font name="Roboto" size="23.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <effect>
+                                                <DropShadow color="#4a4a4a" height="10.02" radius="4.5649999999999995" width="10.24" />
+                                             </effect>
+                                          </HBox>
+                                          <HBox fx:id="publicationHbox" prefHeight="44.0" prefWidth="797.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+                                             <children>
+                                                <JFXHamburger fx:id="publicationalHamburger" onMouseClicked="#hamburgerChange" prefHeight="44.0" prefWidth="66.0" />
+                                                <Label alignment="CENTER" prefHeight="41.0" prefWidth="741.0" text="Publication Information">
+                                                   <font>
+                                                      <Font name="Roboto" size="23.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <effect>
+                                                <DropShadow color="#4a4a4a" height="10.02" radius="4.5649999999999995" width="10.24" />
+                                             </effect>
+                                          </HBox>
+                                          <HBox fx:id="attendedHbox" prefHeight="44.0" prefWidth="797.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+                                             <children>
+                                                <JFXHamburger fx:id="attendedHamburger" onMouseClicked="#hamburgerChange" prefHeight="44.0" prefWidth="66.0" />
+                                                <Label alignment="CENTER" prefHeight="41.0" prefWidth="741.0" text="Attended Information">
+                                                   <font>
+                                                      <Font name="Roboto" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <effect>
+                                                <DropShadow color="#4a4a4a" height="10.02" radius="4.5649999999999995" width="10.24" />
+                                             </effect>
+                                          </HBox>
+                                          <HBox fx:id="organizedHbox" prefHeight="44.0" prefWidth="797.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+                                             <children>
+                                                <JFXHamburger fx:id="organizedHamburger" onMouseClicked="#hamburgerChange" prefHeight="44.0" prefWidth="66.0" />
+                                                <Label alignment="CENTER" prefHeight="41.0" prefWidth="741.0" text="Organized Information">
+                                                   <font>
+                                                      <Font name="Roboto" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <effect>
+                                                <DropShadow color="#4a4a4a" height="10.02" radius="4.5649999999999995" width="10.24" />
+                                             </effect>
+                                          </HBox>
+                                          <HBox fx:id="interactionHbox" prefHeight="44.0" prefWidth="797.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+                                             <children>
+                                                <JFXHamburger fx:id="interactionHamburger" onMouseClicked="#hamburgerChange" prefHeight="44.0" prefWidth="66.0" />
+                                                <Label alignment="CENTER" prefHeight="41.0" prefWidth="741.0" text="Interaction with Outside World Information">
+                                                   <font>
+                                                      <Font name="Roboto" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <effect>
+                                                <DropShadow color="#4a4a4a" height="10.02" radius="4.5649999999999995" width="10.24" />
+                                             </effect>
+                                          </HBox>
+                                          <HBox fx:id="fundedHbox" prefHeight="44.0" prefWidth="797.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+                                             <children>
+                                                <JFXHamburger fx:id="fundedHamburger" onMouseClicked="#hamburgerChange" prefHeight="44.0" prefWidth="66.0" />
+                                                <Label alignment="CENTER" prefHeight="41.0" prefWidth="741.0" text="Funded Research Projects Information">
+                                                   <font>
+                                                      <Font name="Roboto" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <effect>
+                                                <DropShadow color="#4a4a4a" height="10.02" radius="4.5649999999999995" width="10.24" />
+                                             </effect>
+                                          </HBox>
+                                          <HBox fx:id="guestHbox" prefHeight="44.0" prefWidth="826.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+                                             <children>
+                                                <JFXHamburger fx:id="guestHamburger" onMouseClicked="#hamburgerChange" prefHeight="44.0" prefWidth="66.0" />
+                                                <Label alignment="CENTER" prefHeight="41.0" prefWidth="741.0" text="Guest lecture Arranged">
+                                                   <font>
+                                                      <Font name="Roboto" size="25.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <effect>
+                                                <DropShadow color="#4a4a4a" height="10.02" radius="4.5649999999999995" width="10.24" />
+                                             </effect>
+                                          </HBox>
+                                          <HBox prefHeight="47.0" prefWidth="826.0">
+                                             <children>
+                                                <JFXButton fx:id="callFun" onAction="#submitReport" prefHeight="41.0" prefWidth="182.0" style="-fx-background-color: #1976D2; -fx-background-radius: 12px;" text="Submit" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="17.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                             <padding>
+                                                <Insets left="350.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <JFXDrawer fx:id="personalDrawer" alignment="TOP_LEFT" defaultDrawerSize="0.0" direction="TOP" layoutX="73.0" layoutY="721.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#getGeneralCheckboxData" prefHeight="115.0" prefWidth="803.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 10px;" visible="false">
+                                       <children>
+                                          <VBox prefHeight="116.0" prefWidth="788.0" style="-fx-background-color: WHITE; -fx-background-radius: 10px;">
+                                             <children>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="personalSelectAll" onAction="#getGeneralCheckboxData" prefHeight="35.0" prefWidth="155.0" text="Select All">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="806.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="personalDob" onAction="#getGeneralCheckboxData" prefHeight="40.0" prefWidth="154.0" text="Date Of Birth" />
+                                                      <JFXCheckBox fx:id="personalMomName" onAction="#getGeneralCheckboxData" prefHeight="40.0" prefWidth="155.0" text="Mother Name" />
+                                                      <JFXCheckBox fx:id="personalCategory" onAction="#getGeneralCheckboxData" prefHeight="40.0" prefWidth="155.0" text="Category" />
+                                                      <JFXCheckBox fx:id="personalReligion" onAction="#getGeneralCheckboxData" prefHeight="40.0" prefWidth="155.0" text="Religion" />
+                                                      <JFXCheckBox fx:id="personalCaste" alignment="CENTER" onAction="#getGeneralCheckboxData" prefHeight="40.0" prefWidth="155.0" text="Caste" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="41.0" prefWidth="826.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="personalEmail" onAction="#getGeneralCheckboxData" prefHeight="39.0" prefWidth="155.0" text="Personal Email">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="personalMobNo" onAction="#getGeneralCheckboxData" prefHeight="40.0" prefWidth="155.0" text="Mobile Number" />
+                                                      <JFXCheckBox fx:id="personalAddress" onAction="#getGeneralCheckboxData" prefHeight="39.0" prefWidth="155.0" text="Address" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <effect>
+                                          <DropShadow height="10.0" radius="3.25" width="5.0" />
+                                       </effect>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="educationalDrawer" alignment="TOP_LEFT" defaultDrawerSize="0.0" direction="TOP" layoutX="122.0" layoutY="711.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="173.0" prefWidth="815.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 10px;" visible="false">
+                                       <children>
+                                          <VBox prefHeight="156.0" prefWidth="818.0" spacing="2.0" style="-fx-background-color: WHITE; -fx-background-radius: 10px;">
+                                             <children>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="eudcationSelectAll" onAction="#getGeneralCheckboxData" prefHeight="35.0" prefWidth="155.0" text="Select All">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="806.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="edudegreePG" onMouseClicked="#eduHboxSelectionPG" prefHeight="40.0" prefWidth="155.0" text="PG" />
+                                                      <JFXCheckBox fx:id="edudegreeUG" onMouseClicked="#eduHboxSelectionUG" prefHeight="40.0" prefWidth="155.0" text="UG" />
+                                                      <JFXCheckBox fx:id="edudegreeBoth" onMouseClicked="#eduHboxSelectionBoth" prefHeight="40.0" prefWidth="155.0" text="Both" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="27.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="eduDegree" prefHeight="39.0" prefWidth="155.0" text="Degree">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="eduSpecialization" prefHeight="27.0" prefWidth="155.0" text="Specialization" />
+                                                      <JFXCheckBox fx:id="eduUniversityName" prefHeight="27.0" prefWidth="155.0" text="University Name" />
+                                                      <JFXCheckBox fx:id="eduPercentage" prefHeight="39.0" prefWidth="155.0" text="Percentage" />
+                                                      <JFXCheckBox fx:id="eduClass" prefHeight="39.0" prefWidth="155.0" text="Class" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="36.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="eduMonthYear" prefHeight="36.0" prefWidth="155.0" text="Year">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="eduCompletionStatus" prefHeight="36.0" prefWidth="155.0" text="Completion Status" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="36.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="eduPhdDomain" prefHeight="36.0" prefWidth="155.0" text="PHD Domain">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="eduPhdSpecialization" prefHeight="36.0" prefWidth="155.0" text="PHD Specialization" />
+                                                      <JFXCheckBox fx:id="eduPhdUniversityName" prefHeight="36.0" prefWidth="155.0" text="PHD University Name" />
+                                                      <JFXCheckBox fx:id="eduPhdStatus" prefHeight="36.0" prefWidth="155.0" text="PHD Status" />
+                                                      <JFXCheckBox fx:id="eduPhdYearCompletion" prefHeight="36.0" prefWidth="155.0" text="PHD Completion Year" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <effect>
+                                          <DropShadow height="10.0" radius="3.25" width="5.0" />
+                                       </effect>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="publicationalDrawer" alignment="TOP_LEFT" defaultDrawerSize="0.0" direction="TOP" layoutX="130.0" layoutY="747.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="199.0" prefWidth="815.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 10px;" visible="false">
+                                       <children>
+                                          <VBox prefHeight="143.0" prefWidth="818.0" spacing="2.0" style="-fx-background-color: WHITE; -fx-background-radius: 10px;">
+                                             <children>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="publicationSelectAll" onAction="#getGeneralCheckboxData" prefHeight="35.0" prefWidth="155.0" text="Select All">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="806.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="publicationAuthorsName" prefHeight="40.0" prefWidth="150.0" text="Authors Name" />
+                                                      <JFXCheckBox fx:id="publicationCorrespondanceAuthor" prefHeight="29.0" prefWidth="200.0" text="Correspondance Author Name" />
+                                                      <JFXCheckBox fx:id="publicationType" prefHeight="40.0" prefWidth="155.0" text="Publication Type" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="27.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="publicationTitleOfPaper" prefHeight="39.0" prefWidth="150.0" text="Title Of Paper">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="publicationNameOfJournalConference" prefHeight="25.0" prefWidth="200.0" text="Name of Journal /Conference" />
+                                                      <JFXCheckBox fx:id="publicationNameOfPublisherOrganizer" prefHeight="25.0" prefWidth="196.0" text="Name Of Publisher/Organizer" />
+                                                      <JFXCheckBox fx:id="publicationLink" prefHeight="25.0" prefWidth="114.0" text="Link" />
+                                                      <JFXCheckBox fx:id="publicationVenue" prefHeight="25.0" prefWidth="83.0" text="Venue" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="36.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="publicationISSNISBNDOI" prefHeight="36.0" prefWidth="150.0" text="ISSN/ISBN/DOI">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="publicationVolumeAndIssueNumber" prefHeight="34.0" prefWidth="200.0" text="Issue Number" />
+                                                      <JFXCheckBox fx:id="publicationMonthAndYearOfJournalPublication" prefHeight="34.0" prefWidth="155.0" text="Date Of Publication" />
+                                                      <JFXCheckBox fx:id="publicationDuration" prefHeight="36.0" prefWidth="155.0" text="Duration Of Conference" />
+                                                      <JFXCheckBox fx:id="publicationImpactFactor" prefHeight="36.0" prefWidth="138.0" text="Impact Factor" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="36.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="publicationCitiationCount" prefHeight="36.0" prefWidth="150.0" text="Citiation Count">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="publicationScopusIndex" prefHeight="36.0" prefWidth="200.0" text="Scopus Index" />
+                                                      <JFXCheckBox fx:id="publicationSNIP" prefHeight="36.0" prefWidth="155.0" text="SNIP" />
+                                                      <JFXCheckBox fx:id="publicationSJRRank" prefHeight="36.0" prefWidth="155.0" text="SJR Rank" />
+                                                      <JFXCheckBox fx:id="publicationIndexedBy" prefHeight="36.0" prefWidth="138.0" text="Indexed By" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="36.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="publicationFundsRecieved" prefHeight="35.0" prefWidth="140.0" text="Funds Recieved">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="publicationNameOfFundingAgency" prefHeight="35.0" prefWidth="172.0" text="Name Of Funding Agency">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="publicationAcademicYear" alignment="CENTER" prefHeight="35.0" prefWidth="164.0" text="Academic Year" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <effect>
+                                          <DropShadow height="10.0" radius="3.25" width="5.0" />
+                                       </effect>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="sppuDrawer" alignment="TOP_LEFT" defaultDrawerSize="0.0" direction="TOP" layoutX="86.0" layoutY="645.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="839.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 10px;" visible="false">
+                                       <children>
+                                          <VBox prefHeight="116.0" prefWidth="788.0" style="-fx-background-color: WHITE; -fx-background-radius: 10px;">
+                                             <children>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="sppuSelectAll" onAction="#getGeneralCheckboxData" prefHeight="35.0" prefWidth="155.0" text="Select All">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="806.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="sppuDomainPG" onMouseClicked="#SPPUHboxSelectionPG" prefHeight="40.0" prefWidth="155.0" text="PG" />
+                                                      <JFXCheckBox fx:id="sppuDomainPHD" onMouseClicked="#SPPUHboxSelectionPHD" prefHeight="40.0" prefWidth="155.0" text="PHD" />
+                                                      <JFXCheckBox fx:id="sppuDomainBoth" onMouseClicked="#SPPUHboxSelectionBoth" prefHeight="40.0" prefWidth="155.0" text="Both" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox minWidth="-Infinity" prefHeight="41.0" prefWidth="826.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="sppuApprovalCategory" prefHeight="39.0" prefWidth="155.0" text="Approval Category">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="sppuDateOfApproval" prefHeight="40.0" prefWidth="155.0" text="SPPU Date Of Approval" />
+                                                      <JFXCheckBox fx:id="sppuReferenceNo" prefHeight="41.0" prefWidth="166.0" text="SPPU Reference Number" />
+                                                      <JFXCheckBox fx:id="sppuCurrentDesignation" prefHeight="39.0" prefWidth="155.0" text="Current Designation" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox minWidth="-Infinity" prefHeight="36.0" prefWidth="818.0">
+                                                   <children>
+                                                      <Label fx:id="personalSelectedCount11" contentDisplay="CENTER" prefHeight="36.0" prefWidth="155.0" text="STES :-">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                         <font>
+                                                            <Font name="Roboto" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <JFXCheckBox fx:id="STESJoiningDate" prefHeight="39.0" prefWidth="155.0" text="STES Joining Date" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox minWidth="-Infinity" prefHeight="39.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="SPPUEmployeeNo" prefHeight="14.0" prefWidth="155.0" text="Employee Number">
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="SPPUTypesOfAppointment" prefHeight="14.0" prefWidth="155.0" text="Type Of Appointment">
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="SPPUDateAppointmentCurrentDesignation" prefHeight="18.0" prefWidth="271.0" text="Current Designation Appointment Date">
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="SPPUAppointmentOrderReferenceNumber" prefHeight="18.0" prefWidth="236.0" text="Appointment Reference Number">
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox minWidth="-Infinity" prefHeight="45.0" prefWidth="826.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="SPPUCurrentApprovalCategory" prefHeight="18.0" prefWidth="164.0" text="Current Approval Category">
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="SPPUPreviousAppointment" prefHeight="18.0" prefWidth="166.0" text="Previous Appointment">
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="SPPUDateOfApprovalOfCurrentDesignation" prefHeight="18.0" prefWidth="268.0" text="SPPU Date of Approval Current Designation">
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="SPPUApprovalReferenceNumber" prefHeight="18.0" prefWidth="206.0" text="SPPU Approval Reference Number">
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <effect>
+                                          <DropShadow height="10.0" radius="3.25" width="5.0" />
+                                       </effect>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="attendedDrawer" alignment="TOP_LEFT" defaultDrawerSize="0.0" direction="TOP" layoutX="83.0" layoutY="731.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="817.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 10px;" visible="false">
+                                       <children>
+                                          <VBox prefHeight="116.0" prefWidth="788.0" style="-fx-background-color: WHITE; -fx-background-radius: 10px;">
+                                             <children>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="attendedSelectAll" onAction="#getGeneralCheckboxData" prefHeight="35.0" prefWidth="155.0" text="Select All">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="806.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="attendedTypeOfProgramme" prefHeight="40.0" prefWidth="154.0" text="Type Of Programme" />
+                                                      <JFXCheckBox fx:id="attendedTitleOfProgramme" prefHeight="40.0" prefWidth="155.0" text="Title Of Programme" />
+                                                      <JFXCheckBox fx:id="attendedLevelOfProgramme" prefHeight="40.0" prefWidth="155.0" text="Level Of Progarmme" />
+                                                      <JFXCheckBox fx:id="attendedDuration" prefHeight="39.0" prefWidth="155.0" text="Duration" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="41.0" prefWidth="826.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="attendedVenue" prefHeight="37.0" prefWidth="148.0" text="Venue">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="attendedNameOfFundingAgency" alignment="CENTER" prefHeight="37.0" prefWidth="178.0" text="Name Of Funding Agency" />
+                                                      <JFXCheckBox fx:id="attendedFundsReceived" alignment="CENTER" prefHeight="37.0" prefWidth="155.0" text="Funds Received" />
+                                                      <JFXCheckBox fx:id="attendedNameOfApprovingAgency" prefHeight="37.0" prefWidth="201.0" text="Name of Apporoving Agency">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="attendedAcademicYear" prefHeight="43.0" prefWidth="102.0" text="Academic Year" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <effect>
+                                          <DropShadow height="10.0" radius="3.25" width="5.0" />
+                                       </effect>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="organizedDrawer" alignment="TOP_LEFT" defaultDrawerSize="0.0" direction="TOP" layoutX="93.0" layoutY="741.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="803.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 10px;" visible="false">
+                                       <children>
+                                          <VBox prefHeight="116.0" prefWidth="788.0" style="-fx-background-color: WHITE; -fx-background-radius: 10px;">
+                                             <children>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="organizedSelectAll" onAction="#getGeneralCheckboxData" prefHeight="35.0" prefWidth="155.0" text="Select All">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="806.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="organizedTypeOfProgramme" prefHeight="40.0" prefWidth="154.0" text="Type Of Programme" />
+                                                      <JFXCheckBox fx:id="organizedTitleOfProgramme" prefHeight="40.0" prefWidth="155.0" text="Title Of Programme" />
+                                                      <JFXCheckBox fx:id="organizedLevelOfProgramme" prefHeight="40.0" prefWidth="155.0" text="Level Of Progarmme" />
+                                                      <JFXCheckBox fx:id="organizedDuration" prefHeight="39.0" prefWidth="93.0" text="Duration" />
+                                                      <JFXCheckBox fx:id="organizedNoOfParticipants" prefHeight="37.0" prefWidth="148.0" text="No Of Participants">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="41.0" prefWidth="826.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="organizedTargetAudience" prefHeight="37.0" prefWidth="138.0" text="Target Audience">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin></JFXCheckBox>
+                                                      <JFXCheckBox fx:id="organizedNameOfResourcePerson" alignment="CENTER" prefHeight="37.0" prefWidth="198.0" text="Name Of Resource Person" />
+                                                      <JFXCheckBox fx:id="organizedContactNumber" prefHeight="37.0" prefWidth="130.0" text="Contact Number">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="organizedEmailId" prefHeight="37.0" prefWidth="92.0" text="Email Id" />
+                                                      <JFXCheckBox fx:id="organizedAcademicYear" prefHeight="37.0" prefWidth="146.0" text="Academic Year" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <effect>
+                                          <DropShadow height="10.0" radius="3.25" width="5.0" />
+                                       </effect>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="interactionDrawer" alignment="TOP_LEFT" defaultDrawerSize="0.0" direction="TOP" layoutX="103.0" layoutY="751.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="803.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 10px;" visible="false">
+                                       <children>
+                                          <VBox prefHeight="116.0" prefWidth="788.0" style="-fx-background-color: WHITE; -fx-background-radius: 10px;">
+                                             <children>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="interactionSelectAll" onAction="#getGeneralCheckboxData" prefHeight="35.0" prefWidth="155.0" text="Select All">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="806.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="interactionRoleOfFaculty" prefHeight="40.0" prefWidth="154.0" text="Role Of Faculty" />
+                                                      <JFXCheckBox fx:id="interactionParticulars" prefHeight="40.0" prefWidth="155.0" text="Particulars" />
+                                                      <JFXCheckBox fx:id="interactionTargetAudiance" prefHeight="40.0" prefWidth="155.0" text="Target Audience" />
+                                                      <JFXCheckBox fx:id="interactionNoofParticipants" prefHeight="40.0" prefWidth="169.0" text="Number Of Participants" />
+                                                      <JFXCheckBox fx:id="interactionProgramDate" prefHeight="39.0" prefWidth="157.0" text="Programme Date" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="41.0" prefWidth="826.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="interactionVenue" prefHeight="37.0" prefWidth="131.0" text="Venue">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="interactionNoOfDays" alignment="CENTER" prefHeight="37.0" prefWidth="163.0" text="Number Of Days" />
+                                                      <JFXCheckBox fx:id="interactionAcademicYear" alignment="CENTER" prefHeight="37.0" prefWidth="143.0" text="Academic Year" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <effect>
+                                          <DropShadow height="10.0" radius="3.25" width="5.0" />
+                                       </effect>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="guestDrawer" alignment="TOP_LEFT" defaultDrawerSize="0.0" direction="TOP" layoutX="113.0" layoutY="761.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="146.0" prefWidth="803.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 10px;" visible="false">
+                                       <children>
+                                          <VBox prefHeight="116.0" prefWidth="788.0" style="-fx-background-color: WHITE; -fx-background-radius: 10px;">
+                                             <children>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="guestSelectAll" onAction="#getGeneralCheckboxData" prefHeight="35.0" prefWidth="155.0" text="Select All">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="806.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="guestTopics" prefHeight="40.0" prefWidth="154.0" text="Topics" />
+                                                      <JFXCheckBox fx:id="guestNameOfResourcePerson" prefHeight="40.0" prefWidth="189.0" text="Name Of Resource Person" />
+                                                      <JFXCheckBox fx:id="guestDesignationOfResourcePerson" prefHeight="40.0" prefWidth="229.0" text="Designation Of Resource Person" />
+                                                      <JFXCheckBox fx:id="guestResourcePersonOrganization" prefHeight="40.0" prefWidth="214.0" text="Organzation Of Resource Person" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="41.0" prefWidth="826.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="guestResourcePersonMobileNo" prefHeight="37.0" prefWidth="127.0" text="Mobile Number">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="guestResourcePersonEmailId" alignment="CENTER" prefHeight="23.0" prefWidth="125.0" text="Email ID" />
+                                                      <JFXCheckBox fx:id="guestTargetAudience" alignment="CENTER" prefHeight="23.0" prefWidth="298.0" text="Target Audience" />
+                                                      <JFXCheckBox fx:id="guestNumberOfParticipants" prefHeight="23.0" prefWidth="203.0" text="Number Of Participants">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="64.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="guestRemuneration" alignment="CENTER" prefHeight="37.0" prefWidth="123.0" text="Renumeration" />
+                                                      <JFXCheckBox fx:id="guestDateOfConduction" alignment="CENTER" prefHeight="37.0" prefWidth="214.0" text="Date Of Conduction" />
+                                                      <JFXCheckBox fx:id="guestAcademicYear" alignment="CENTER" prefHeight="37.0" prefWidth="143.0" text="Academic Year" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <effect>
+                                          <DropShadow height="10.0" radius="3.25" width="5.0" />
+                                       </effect>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="fundedDrawer" alignment="TOP_LEFT" defaultDrawerSize="0.0" direction="TOP" layoutX="83.0" layoutY="731.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="803.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 10px;" visible="false">
+                                       <children>
+                                          <VBox prefHeight="116.0" prefWidth="788.0" style="-fx-background-color: WHITE; -fx-background-radius: 10px;">
+                                             <children>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="fundedSelectAll" onAction="#getGeneralCheckboxData" prefHeight="35.0" prefWidth="155.0" text="Select All">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="806.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="fundedRole" prefHeight="40.0" prefWidth="154.0" text="Role" />
+                                                      <JFXCheckBox fx:id="fundedInCollaborationWith" prefHeight="40.0" prefWidth="155.0" text="In Collaboration With" />
+                                                      <JFXCheckBox fx:id="fundedTitleofResearchProduct" prefHeight="40.0" prefWidth="155.0" text="Title Of Research" />
+                                                      <JFXCheckBox fx:id="fundedSponsoringAgency" prefHeight="40.0" prefWidth="155.0" text="Sponsoring Agency" />
+                                                      <JFXCheckBox fx:id="fundedStatus" alignment="CENTER" prefHeight="40.0" prefWidth="155.0" text="Status" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="41.0" prefWidth="826.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="fundedSanctionedAmount" prefHeight="39.0" prefWidth="155.0" text="Sanctioned Amount">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="fundedReceivedAmount" prefHeight="40.0" prefWidth="155.0" text="Recieved Amount" />
+                                                      <JFXCheckBox fx:id="fundedUtilizedAmount" prefHeight="39.0" prefWidth="155.0" text="Utilized Amount" />
+                                                      <JFXCheckBox fx:id="fundedOutcome" prefHeight="37.0" prefWidth="115.0" text="Out Come" />
+                                                      <JFXCheckBox fx:id="fundedFromDate" prefHeight="37.0" prefWidth="71.0" text="Date" />
+                                                      <JFXCheckBox fx:id="fundedAcademicYear" alignment="CENTER" prefHeight="37.0" prefWidth="143.0" text="Academic Year" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <effect>
+                                          <DropShadow height="10.0" radius="3.25" width="5.0" />
+                                       </effect>
+                                    </JFXDrawer>
+                                    <JFXDrawer fx:id="workingDrawer" alignment="TOP_LEFT" defaultDrawerSize="0.0" direction="TOP" layoutX="93.0" layoutY="741.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#hamburgerChange" prefHeight="125.0" prefWidth="818.0" style="-fx-background-color: #4a4a4a; -fx-background-radius: 10px;" visible="false">
+                                       <children>
+                                          <VBox prefHeight="116.0" prefWidth="788.0" style="-fx-background-color: WHITE; -fx-background-radius: 10px;">
+                                             <children>
+                                                <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="818.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="workSelectAll" onAction="#getGeneralCheckboxData" prefHeight="35.0" prefWidth="155.0" text="Select All">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox fx:id="workingFieldHbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="806.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="workFieldIndustrial" onMouseClicked="#workingHboxSelectionIndustrial" prefHeight="40.0" prefWidth="184.0" text="Industrial" />
+                                                      <JFXCheckBox fx:id="workFieldTeaching" onMouseClicked="#workingHboxSelectionteaching" prefHeight="40.0" prefWidth="154.0" text="Teaching" />
+                                                      <JFXCheckBox fx:id="workFieldBoth" onMouseClicked="#workingHboxSelectionBoth" prefHeight="40.0" prefWidth="154.0" text="Both" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <JFXCheckBox fx:id="workNameOfInstitute" prefHeight="40.0" prefWidth="184.0" text="Name of Institute/Industry">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </JFXCheckBox>
+                                                      <JFXCheckBox fx:id="workPosition" prefHeight="40.0" prefWidth="155.0" text="Position" />
+                                                      <JFXCheckBox fx:id="workDateOfJoining" prefHeight="40.0" prefWidth="155.0" text="Date Of Joining" />
+                                                      <JFXCheckBox fx:id="workDateOfLeaving" alignment="CENTER" prefHeight="33.0" prefWidth="171.0" text="Date Of Leaving" />
+                                                      <JFXCheckBox fx:id="workExperience" prefHeight="33.0" prefWidth="149.0" text="Experience(In Years)" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <effect>
+                                          <DropShadow height="10.0" radius="3.25" width="5.0" />
+                                       </effect>
+                                    </JFXDrawer>
+                                    <HBox layoutX="113.0" layoutY="101.0" prefHeight="42.0" prefWidth="822.0">
+                                       <children>
+                                          <JFXCheckBox fx:id="FacultyName" prefHeight="38.0" prefWidth="174.0" text="Faculty Name">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </JFXCheckBox>
+                                          <JFXCheckBox fx:id="UserName" prefHeight="38.0" prefWidth="174.0" text="User Name">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXCheckBox>
+                                          <JFXCheckBox fx:id="DepartmentName" prefHeight="38.0" prefWidth="203.0" text="Department Name">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXCheckBox>
+                                          <JFXCheckBox fx:id="DepartmentID" prefHeight="38.0" prefWidth="174.0" text="Department Id">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXCheckBox>
+                                          <JFXCheckBox fx:id="Status" prefHeight="38.0" prefWidth="174.0" text="Status">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXCheckBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="summaryPane" prefHeight="941.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="944.0" prefWidth="1049.0" style="-fx-background-color: #fff;">
+                                 <children>
+                                    <Label layoutX="167.0" layoutY="40.0" prefHeight="35.0" prefWidth="206.0" text="Academic Year :">
+                                       <font>
+                                          <Font name="Roboto" size="23.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXComboBox fx:id="academicYearFromSummary" layoutX="382.0" layoutY="42.0" prefHeight="30.0" prefWidth="104.0" promptText="From" />
+                                    <JFXComboBox fx:id="academicYearToSummary" layoutX="528.0" layoutY="43.0" prefHeight="30.0" prefWidth="104.0" promptText="To" />
+                                    <JFXButton fx:id="submitSummary" layoutX="424.0" layoutY="381.0" onAction="#summarySubmit" prefHeight="40.0" prefWidth="163.0" style="-fx-background-radius: 12px; -fx-background-color: #1976D2;" text="Submit" textFill="#fff4f4">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <VBox fx:id="summaryVbox" layoutX="167.0" layoutY="113.0" prefHeight="241.0" prefWidth="642.0">
+                                       <children>
+                                          <JFXCheckBox fx:id="publicationCheck" onMouseClicked="#selectForm" prefHeight="17.0" prefWidth="519.0" text="Publication Details">
+                                             <font>
+                                                <Font name="Roboto" size="23.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </JFXCheckBox>
+                                          <JFXCheckBox fx:id="attendedCheck" onMouseClicked="#selectForm" prefHeight="38.0" prefWidth="519.0" text="Attended Details">
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="Roboto" size="23.0" />
+                                             </font>
+                                          </JFXCheckBox>
+                                          <JFXCheckBox fx:id="organizedCheck" onMouseClicked="#selectForm" prefHeight="38.0" prefWidth="519.0" text="Organized Details">
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="Roboto" size="23.0" />
+                                             </font>
+                                          </JFXCheckBox>
+                                          <JFXCheckBox fx:id="interactionCheck" onMouseClicked="#selectForm" prefHeight="38.0" prefWidth="519.0" text="Interaction With the Outside World">
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="Roboto" size="23.0" />
+                                             </font>
+                                          </JFXCheckBox>
+                                          <JFXCheckBox fx:id="fundedCheck" onMouseClicked="#selectForm" prefHeight="38.0" prefWidth="519.0" text="Funded Research Project">
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="Roboto" size="23.0" />
+                                             </font>
+                                          </JFXCheckBox>
+                                          <JFXCheckBox fx:id="guestCheck" onMouseClicked="#selectForm" prefHeight="38.0" prefWidth="519.0" text="Guest Lecture Arranged">
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="Roboto" size="23.0" />
+                                             </font>
+                                          </JFXCheckBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </Pane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

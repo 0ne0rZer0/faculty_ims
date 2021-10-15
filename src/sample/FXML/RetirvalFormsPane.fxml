@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane prefHeight="1100.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RetrivalFormsPane">
+   <content>
+      <AnchorPane prefHeight="1100.0" prefWidth="1000.0">
+         <children>
+            <Pane fx:id="guestRetrivalPane" prefHeight="1100.0" prefWidth="1000.0">
+               <children>
+                  <AnchorPane fx:id="guestRetrivalAnchorPane" layoutY="-3.0" prefHeight="1184.0" prefWidth="1000.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <Separator layoutX="5.0" layoutY="70.0" prefHeight="0.0" prefWidth="971.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="70.0" />
+                        <Label layoutX="59.0" layoutY="110.0" lineSpacing="5.0" prefHeight="30.0" prefWidth="234.0" text="Program Resource Details" textFill="#111111" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="110.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="26.0" layoutY="142.0" prefHeight="4.0" prefWidth="939.0" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="140.0" />
+                        <Label layoutX="59.0" layoutY="189.0" prefHeight="26.0" prefWidth="230.0" text="Name Of Resource Person" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="180.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="guestNameOfResourcePerson" layoutX="59.0" layoutY="215.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="210.0" />
+                        <Label layoutX="449.0" layoutY="268.0" prefHeight="26.0" prefWidth="230.0" text="Resource Person Mobile No." AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="180.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="guestResourcePersonMobileNo" layoutX="394.0" layoutY="259.0" prefHeight="26.0" prefWidth="230.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="210.0" />
+                        <Label layoutX="32.0" layoutY="380.0" prefHeight="26.0" prefWidth="187.0" text="Resource Person Email Id" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="180.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="guestResourcePersonEmailId" layoutX="70.0" layoutY="362.0" prefHeight="26.0" prefWidth="230.0" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="210.0" />
+                        <Label layoutX="59.0" layoutY="272.0" prefHeight="26.0" prefWidth="230.0" text="Resource Person Organization" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="280.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="guestResourcePersonOrganization" layoutX="66.0" layoutY="309.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="310.0" />
+                        <Label layoutX="394.0" layoutY="180.0" prefHeight="26.0" prefWidth="230.0" text="Designation of Resource Person" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="380.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="guestDesignationOfResourcePerson" layoutX="394.0" layoutY="210.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="410.0" />
+                        <Label layoutX="40.0" layoutY="479.0" lineSpacing="5.0" prefHeight="30.0" prefWidth="147.0" text="Program Details" textFill="#111111" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="480.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="41.0" layoutY="507.0" prefHeight="0.0" prefWidth="921.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="510.0" />
+                        <Label layoutX="91.0" layoutY="546.0" prefHeight="26.0" prefWidth="230.0" text="Topic or Subject" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="560.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="guestTopic" layoutX="67.0" layoutY="594.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="590.0" />
+                        <Label layoutX="114.0" layoutY="638.0" prefHeight="26.0" prefWidth="230.0" text="Number of Participants" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="660.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="guestNumberOfParticipant" layoutX="81.0" layoutY="665.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="690.0" />
+                        <Label layoutX="404.0" layoutY="637.0" prefHeight="26.0" prefWidth="230.0" text="Remuneration(in Rs.)" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="660.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="guestRemuneration" layoutX="419.0" layoutY="672.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="690.0" />
+                        <Label layoutX="50.0" layoutY="746.0" prefHeight="26.0" prefWidth="144.0" text="Date of Conduction" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="760.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="guestDateOfConduction" layoutX="60.0" layoutY="765.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="790.0" />
+                        <Label layoutX="441.0" layoutY="762.0" prefHeight="26.0" prefWidth="230.0" text="Academic Year" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="760.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="guestAcademicYear" layoutX="412.0" layoutY="739.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="790.0" />
+                        <Label layoutX="76.0" layoutY="856.0" prefHeight="30.0" prefWidth="138.0" text="Target Audience :" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="860.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <VBox fx:id="guestVBOXTargetAudience" layoutX="60.0" layoutY="912.0" prefHeight="240.0" prefWidth="153.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="905.0">
+                           <children>
+                              <JFXCheckBox fx:id="guestVBOXFE" prefHeight="25.0" prefWidth="155.0" text="FE Students" />
+                              <JFXCheckBox fx:id="guestVBOXSE" prefHeight="25.0" prefWidth="155.0" text="SE Students" />
+                              <JFXCheckBox fx:id="guestVBOXTE" prefHeight="25.0" prefWidth="155.0" text="TE Students" />
+                              <JFXCheckBox fx:id="guestVBOXBE" prefHeight="25.0" prefWidth="155.0" text="BE Students" />
+                              <JFXCheckBox fx:id="guestVBOXMEI" prefHeight="25.0" prefWidth="155.0" text="ME-I Students" />
+                              <JFXCheckBox fx:id="guestVBOXMEII" prefHeight="25.0" prefWidth="155.0" text="ME-II Students" />
+                              <JFXCheckBox fx:id="guestVBOXPhD" prefHeight="25.0" prefWidth="155.0" text="Doctoral(PhD) Students" />
+                              <JFXCheckBox fx:id="guestVBOXFaculty" prefHeight="25.0" prefWidth="155.0" text="Faculty" />
+                              <JFXCheckBox fx:id="guestVBOXMBAI" prefHeight="25.0" prefWidth="155.0" text="MBA-I" />
+                              <JFXCheckBox fx:id="guestVBOXMBAII" prefHeight="25.0" prefWidth="155.0" text="MBA-II" />
+                           </children>
+                        </VBox>
+                        <JFXButton fx:id="guestUpdateButton" layoutX="400.0" layoutY="1145.0" onAction="#guestSaveButtonHandle" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Update" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="1145.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="66.0" prefWidth="744.0">
+                     <children>
+                        <JFXToggleButton fx:id="guestLectureEditButton" layoutX="367.0" layoutY="3.0" onAction="#guestEdit" text="Edit">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXToggleButton>
+                        <Label layoutX="14.0" layoutY="6.0" lineSpacing="5.0" prefHeight="54.0" prefWidth="353.0" text="Guest Lectures Arranged" textFill="#111111">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane fx:id="interactionRetrivalPane" prefHeight="1100.0" prefWidth="1000.0">
+               <children>
+                  <AnchorPane prefHeight="1200.0" prefWidth="1000.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <Separator layoutX="10.0" layoutY="81.0" prefHeight="4.0" prefWidth="1260.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="80.0" />
+                        <Label layoutX="57.0" layoutY="123.0" prefHeight="30.0" prefWidth="39.0" text="Role" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="120.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="interactionRole" layoutX="60.0" layoutY="153.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="150.0" />
+                        <Label layoutX="60.0" layoutY="206.0" prefHeight="30.0" prefWidth="515.0" text="Title of ( Lecture / Conference / STTP / FDP ) / Company name for SPoC" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="220.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="interactionTitle" layoutX="60.0" layoutY="244.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="250.0" />
+                        <Label layoutX="54.0" layoutY="313.0" prefHeight="30.0" prefWidth="507.0" text="Target Audience" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="320.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox fx:id="interactionHBOXTargetAudience" layoutX="53.0" layoutY="350.0" prefHeight="38.0" prefWidth="602.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="350.0">
+                           <children>
+                              <JFXCheckBox fx:id="interactionTargetStudent" text="Students">
+                                 <padding>
+                                    <Insets right="15.0" />
+                                 </padding>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="interactionTargetResearch" text="Research Scholar">
+                                 <padding>
+                                    <Insets right="15.0" />
+                                 </padding>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="interactionTargetFaculty" text="Faculty">
+                                 <padding>
+                                    <Insets right="15.0" />
+                                 </padding>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="interactionTargetIndustry" prefWidth="123.0" text="Industry Person">
+                                 <padding>
+                                    <Insets right="15.0" />
+                                 </padding>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="interactionTargetNonTeaching" text="Non Teaching Staff">
+                                 <padding>
+                                    <Insets right="15.0" />
+                                 </padding>
+                              </JFXCheckBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <Label layoutX="64.0" layoutY="323.0" prefHeight="30.0" prefWidth="507.0" text="No of Participants" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="420.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="interactionNoOfParticipants" layoutX="64.0" layoutY="450.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="450.0" />
+                        <JFXTextArea fx:id="interactionVenue" layoutX="295.0" layoutY="482.0" prefHeight="106.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="550.0" />
+                        <Label layoutX="74.0" layoutY="333.0" prefHeight="30.0" prefWidth="507.0" text="Venue" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="520.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="interactionProgrammeDate" layoutX="329.0" layoutY="704.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="750.0" />
+                        <Label layoutX="84.0" layoutY="343.0" prefHeight="30.0" prefWidth="212.0" text="Programme Date" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="720.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="interactionNoOfDays" layoutX="549.0" layoutY="761.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="750.0" />
+                        <Label layoutX="74.0" layoutY="333.0" prefHeight="30.0" prefWidth="214.0" text="No of Days" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="720.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="interactionAcademicYear" layoutX="-29.0" layoutY="861.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="850.0">
+                           <tooltip>
+                              <Tooltip text="Please Select Degree" />
+                           </tooltip>
+                        </JFXComboBox>
+                        <Label layoutX="84.0" layoutY="343.0" prefHeight="30.0" prefWidth="214.0" text="Academic Year" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="820.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="interactionUpdate" layoutX="378.0" layoutY="917.0" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Update" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="950.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="interactionRetrivalAnchorPane" prefHeight="81.0" prefWidth="764.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="24.0" lineSpacing="5.0" prefHeight="47.0" prefWidth="509.0" text="Interaction With the Outside World" textFill="#111111">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                        <JFXToggleButton fx:id="interactionEditButton" layoutX="524.0" layoutY="17.0" onAction="#interactionEdit" prefHeight="60.0" prefWidth="102.0" text="Edit">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane fx:id="attendedRetrivalPane" prefHeight="1100.0" prefWidth="1000.0">
+               <children>
+                  <AnchorPane fx:id="attendedRetrivalAnchorPane" prefHeight="1100.0" prefWidth="1000.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <Separator layoutX="9.0" layoutY="61.0" prefHeight="5.0" prefWidth="973.0" AnchorPane.bottomAnchor="1034.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="70.0" />
+                        <Label layoutX="50.0" layoutY="230.0" prefHeight="30.0" prefWidth="145.0" text="Type of Programme" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="230.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="attendedTitleOfProgramme" layoutX="50.0" layoutY="175.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="160.0" />
+                        <JFXComboBox fx:id="attendedTypeOfProgramme" layoutX="45.0" layoutY="260.0" prefHeight="26.0" prefWidth="211.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="260.0" />
+                        <JFXComboBox fx:id="attendedLevelOfProgramme" layoutX="475.0" layoutY="253.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="260.0" />
+                        <JFXTextField fx:id="attendedNameOfApprovingAgency" layoutX="669.0" layoutY="265.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="260.0" />
+                        <JFXTextField fx:id="attendedOrganizerName" layoutX="56.0" layoutY="359.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="360.0" />
+                        <JFXTextArea fx:id="attendedVenue" layoutX="60.0" layoutY="460.0" prefHeight="76.0" prefWidth="550.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="460.0" />
+                        <DatePicker fx:id="attendedDateFrom" layoutX="156.0" layoutY="612.0" prefHeight="26.0" prefWidth="211.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="630.0" />
+                        <DatePicker fx:id="attendedDateTo" layoutX="396.0" layoutY="630.0" prefHeight="26.0" prefWidth="211.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="630.0" />
+                         <JFXTextField fx:id="attendedDuration" layoutX="770.0" layoutY="630.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="630.0" />
+                        <JFXTextField fx:id="attendedNameOfFundingAgency" layoutX="45.0" layoutY="762.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="730.0" />
+                        <JFXTextField fx:id="attendedFundsReceived" layoutX="480.0" layoutY="749.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="830.0" />
+                        <JFXComboBox fx:id="attendedAcademicYear" layoutX="48.0" layoutY="917.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="830.0" />
+                        <JFXButton fx:id="attendedUpdateButton" layoutX="224.0" layoutY="908.0" onAction="#attendedSaveButtonHandle" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Update" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="930.0" />
+                        <Label layoutX="50.0" layoutY="145.0" prefHeight="30.0" prefWidth="145.0" text="Title of Programme" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="130.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="322.0" prefHeight="30.0" prefWidth="118.0" text="Organizer Name" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="322.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="490.0" layoutY="140.0" prefHeight="30.0" prefWidth="145.0" text="Level of Programme" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="230.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="785.0" layoutY="230.0" prefHeight="30.0" prefWidth="201.0" text="Name of Approving Agency" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="230.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="430.0" prefHeight="30.0" prefWidth="50.0" text="Venue" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="430.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="588.0" prefHeight="30.0" prefWidth="88.0" text="Date  From" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="600.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="60.0" layoutY="598.0" prefHeight="30.0" prefWidth="61.0" text="Date  To" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="600.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="55.0" layoutY="700.0" prefHeight="30.0" prefWidth="201.0" text="Name of Funding Agency" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="700.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="473.0" layoutY="700.0" prefHeight="30.0" prefWidth="201.0" text="Funds Recieved(Rs.)" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="800.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="50.0" layoutY="881.0" prefHeight="30.0" prefWidth="201.0" text="Academic Year" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="800.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="760.0" layoutY="600.0" prefHeight="30.0" prefWidth="72.0" text="Duration" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="600.0">
+                            <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="68.0" prefWidth="981.0">
+                     <children>
+                        <Label layoutX="11.0" layoutY="11.0" lineSpacing="5.0" prefHeight="46.0" prefWidth="825.0" text="Attended : STTP / FDP / Seminar / Workshop / Conference" textFill="#111111">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                        <JFXToggleButton fx:id="attendedEditButton" layoutX="836.0" layoutY="4.0" onAction="#attendedEdit" prefHeight="60.0" prefWidth="104.0" text="Edit">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane fx:id="fundedRetrivalPane" prefHeight="1100.0" prefWidth="1000.0">
+               <children>
+                  <AnchorPane fx:id="fundedRetrivalAnchorPane" layoutY="-17.0" prefHeight="1100.0" prefWidth="1000.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <Separator layoutY="73.0" prefHeight="0.0" prefWidth="964.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="75.0" />
+                        <Label layoutX="-7.0" layoutY="102.0" prefHeight="26.0" prefWidth="230.0" text="Role" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="150.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="fundedRole" layoutX="68.0" layoutY="446.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="180.0">
+                           <tooltip>
+                              <Tooltip text="Please Select Degree" />
+                           </tooltip>
+                        </JFXComboBox>
+                        <Label layoutX="60.0" layoutY="253.0" prefHeight="26.0" prefWidth="500.0" text="In Collaboration With (Name of the Company/ Organization)" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="250.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="fundedNameOfCompany" layoutX="104.0" layoutY="519.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="280.0" />
+                        <Label layoutX="67.0" layoutY="341.0" prefHeight="26.0" prefWidth="176.0" text="Title of Research Project" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="350.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="fundedTitleOfResearch" layoutX="104.0" layoutY="588.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="380.0" />
+                        <Label layoutX="67.0" layoutY="453.0" prefHeight="26.0" prefWidth="141.0" text="Sponsoring Agency" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="450.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="fundedSponsoringAgency" layoutX="104.0" layoutY="666.0" onAction="#enableSponsoring" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="480.0">
+                           <tooltip>
+                              <Tooltip text="Please Select Degree" />
+                           </tooltip>
+                        </JFXComboBox>
+                        <Label fx:id="fundedOtherSponsoringAgencyLabel" layoutX="397.0" layoutY="450.0" prefHeight="26.0" prefWidth="200.0" text="Sponsoring Agency Other">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="fundedOtherSponsoringAgency" layoutX="397.0" layoutY="480.0" prefHeight="26.0" prefWidth="200.0" promptText="Specify the Field" />
+                        <Label layoutX="17.0" layoutY="524.0" prefHeight="26.0" prefWidth="175.0" text="Sanctioned Amount.(Rs)" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="550.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="fundedSanctiondeAmount" layoutX="104.0" layoutY="742.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="580.0" />
+                        <Label layoutX="384.0" layoutY="543.0" prefHeight="26.0" prefWidth="230.0" text="Received Amount (Rs.)" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="550.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="fundedReceivedAmount" layoutX="362.0" layoutY="742.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="580.0" />
+                        <Label layoutX="733.0" layoutY="536.0" prefHeight="26.0" prefWidth="230.0" text="Utilized Amount (Rs.)" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="550.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="fundedUtilizedAmount" layoutX="619.0" layoutY="742.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="580.0" />
+                        <Label layoutX="105.0" layoutY="817.0" prefHeight="29.0" prefWidth="122.0" text="Outcome :" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="650.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox fx:id="fundedHBOXOutcome" layoutX="60.0" layoutY="685.0" prefHeight="37.0" prefWidth="474.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="685.0">
+                           <children>
+                              <JFXCheckBox fx:id="fundedHBOXResearchPaper" prefHeight="47.0" prefWidth="142.0" text="Research Paper" textAlignment="RIGHT">
+                                 <padding>
+                                    <Insets bottom="20.0" />
+                                 </padding>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="fundedHBOXPatents" prefHeight="37.0" prefWidth="101.0" text="Patents" textAlignment="RIGHT">
+                                 <padding>
+                                    <Insets bottom="20.0" />
+                                 </padding>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="fundedHBOXBooks" prefHeight="37.0" prefWidth="96.0" text="Books" textAlignment="RIGHT">
+                                 <padding>
+                                    <Insets bottom="20.0" />
+                                 </padding>
+                              </JFXCheckBox>
+                              <JFXCheckBox fx:id="fundedHBOXOther" prefHeight="37.0" prefWidth="132.0" text="Other For MBA" textAlignment="RIGHT">
+                                 <padding>
+                                    <Insets bottom="20.0" />
+                                 </padding>
+                              </JFXCheckBox>
+                           </children>
+                        </HBox>
+                        <Label layoutX="46.0" layoutY="738.0" prefHeight="26.0" prefWidth="230.0" text="Status" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="750.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="fundedStatus" layoutX="105.0" layoutY="935.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="780.0">
+                           <tooltip>
+                              <Tooltip text="Please Select Degree" />
+                           </tooltip>
+                        </JFXComboBox>
+                        <Label layoutX="60.0" layoutY="831.0" prefHeight="26.0" prefWidth="79.0" text="Date From" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="850.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="fundedFromDate" layoutX="105.0" layoutY="1017.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="880.0" />
+                        <Label layoutX="400.0" layoutY="817.0" prefHeight="26.0" prefWidth="65.0" text="Date To" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="850.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="fundedToDate" layoutX="422.0" layoutY="1017.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="880.0" />
+                        <Label layoutX="60.0" layoutY="937.0" prefHeight="26.0" prefWidth="230.0" text="Academic Year" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="950.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="fundedAcademicYear" layoutX="105.0" layoutY="1092.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="980.0">
+                           <tooltip>
+                              <Tooltip text="Please Select Degree" />
+                           </tooltip>
+                        </JFXComboBox>
+                        <JFXButton fx:id="fundedUpdateButton" layoutX="224.0" layoutY="1200.0" onAction="#fundedSaveButtonHandle" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Update" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="1050.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="58.0" prefWidth="977.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="7.0" lineSpacing="5.0" prefHeight="34.0" prefWidth="466.0" text="Funded Research Projects Details" textFill="#111111">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                        <JFXToggleButton fx:id="fundedEditButton" layoutX="480.0" layoutY="1.0" onAction="#fundedEdit" prefHeight="46.0" prefWidth="102.0" text="Edit">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane fx:id="workingPane" prefHeight="1100.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                 <children>
+                     <AnchorPane fx:id="workingRetrivalAnchorPane" layoutX="7.0" prefHeight="1100.0" prefWidth="1000.0" style="-fx-background-color: #fff;">
+                         <children>
+                             <Separator layoutY="69.0" prefHeight="3.0" prefWidth="1020.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="69.0" />
+                             <Label layoutX="15.0" layoutY="99.0" prefHeight="18.0" prefWidth="152.0" text="Details" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="99.0">
+                                 <font>
+                                     <Font size="20.0" />
+                                 </font>
+                             </Label>
+                             <Separator layoutY="134.0" prefHeight="0.0" prefWidth="950.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="134.0" />
+                             <Label layoutX="50.0" layoutY="179.0" prefHeight="30.0" prefWidth="122.0" text="Date of Joining" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="179.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <DatePicker fx:id="eduWorkDateOfJoining" layoutX="50.0" layoutY="209.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="209.0" />
+                             <Label layoutX="390.0" layoutY="179.0" prefHeight="30.0" prefWidth="124.0" text="Date of Leaving" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="179.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <DatePicker fx:id="eduWorkDateOfLeaving" layoutX="390.0" layoutY="209.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="209.0" />
+                             <Label layoutX="50.0" layoutY="279.0" prefHeight="30.0" prefWidth="83.0" text="Position" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="279.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="eduWorkPosition" layoutX="50.0" layoutY="309.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="309.0" />
+                             <Label layoutX="390.0" layoutY="279.0" prefHeight="30.0" prefWidth="233.0" text="Name of Institution/Industry" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="279.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="eduWorkName" layoutX="390.0" layoutY="309.0" prefHeight="26.0" prefWidth="487.0" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="309.0" />
+                             <JFXToggleButton fx:id="workingEditButton" layoutX="882.0" layoutY="-197.0" prefHeight="60.0" prefWidth="102.0" text="Edit" AnchorPane.leftAnchor="882.0" AnchorPane.topAnchor="-197.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </JFXToggleButton>
+                             <JFXButton fx:id="eduWorkingUpdateButton" layoutX="410.0" layoutY="421.0" onAction="#workingExperienceHandle" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Update" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="421.0" />
+                         </children>
+                     </AnchorPane>
+                  <AnchorPane prefHeight="70.0" prefWidth="973.0">
+                     <children>
+                        <JFXToggleButton fx:id="eduWorkingEditButton" layoutX="302.0" layoutY="6.0" onAction="#workingEdit" prefHeight="60.0" prefWidth="102.0" text="Edit">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXToggleButton>
+                        <Label layoutX="14.0" layoutY="12.0" lineSpacing="5.0" text="Working Experience" textFill="#111111">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                 </children>
+             </Pane>
+            <Pane fx:id="organizedRetrivalPane" prefHeight="1100.0" prefWidth="1000.0">
+               <children>
+                  <AnchorPane fx:id="organizedRetrivalAnchorPane" prefHeight="1100.0" prefWidth="1000.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <Separator layoutX="305.0" layoutY="102.0" prefHeight="4.0" prefWidth="1260.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="70.0" />
+                        <Label layoutX="329.0" layoutY="128.0" lineSpacing="5.0" prefHeight="30.0" prefWidth="146.0" text="Program Details" textFill="#111111" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="110.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="320.0" layoutY="169.0" prefHeight="0.0" prefWidth="926.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="140.0" />
+                        <Label layoutX="126.0" layoutY="183.0" prefHeight="30.0" prefWidth="145.0" text="Title of Programme" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="180.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="organizedTitleOfProgramme" layoutX="376.0" layoutY="200.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="210.0" />
+                        <Label layoutX="60.0" layoutY="280.0" prefHeight="30.0" prefWidth="145.0" text="Type of Programme" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="280.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="organizedTypeOfProgramme" layoutX="408.0" layoutY="273.0" onAction="#enabledOther" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="310.0" />
+                        <Label fx:id="organizedTypeOfProgrammeOtherLabel" layoutX="483.0" layoutY="275.0" prefHeight="30.0" prefWidth="198.0" text="Type of Programme(other)" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="280.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="organizedTypeOfProgrammeOther" layoutX="480.0" layoutY="311.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="311.0" />
+                        <Label layoutX="182.0" layoutY="140.0" prefHeight="30.0" prefWidth="145.0" text="Level of Programme" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="380.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="organizedLevelOfProgramme" layoutX="410.0" layoutY="343.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="410.0" />
+                        <Label layoutX="314.0" layoutY="180.0" prefHeight="30.0" prefWidth="154.0" text="Approving Authority" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="380.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="organizedApprovingAuthority" layoutX="489.0" layoutY="452.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="410.0" />
+                        <Label layoutX="324.0" layoutY="190.0" prefHeight="30.0" prefWidth="154.0" text="Sponsoring Authority" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="380.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="organizedSponsoringAuthority" layoutX="1000.0" layoutY="343.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="410.0" />
+                        <Label layoutX="536.0" layoutY="180.0" prefHeight="30.0" prefWidth="145.0" text="Funds Received(Rs.)" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="480.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="organizedFundsReceived" layoutX="407.0" layoutY="412.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="510.0" />
+                        <Label layoutX="615.0" layoutY="210.0" prefHeight="30.0" prefWidth="145.0" text="Funds Utilized(Rs.)" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="480.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="organizedFundsUtilized" layoutX="709.0" layoutY="412.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="510.0" />
+                        <Label layoutX="760.0" layoutY="480.0" prefHeight="30.0" prefWidth="66.0" text="Duration" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="480.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="organizedDuration" layoutX="719.0" layoutY="422.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="510.0" />
+                        <Label layoutX="319.0" layoutY="369.0" prefHeight="30.0" prefWidth="76.0" text="Date From" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="580.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="organizedDateFrom" layoutX="62.0" layoutY="632.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="610.0" />
+                        <Label layoutX="497.0" layoutY="602.0" prefHeight="30.0" prefWidth="56.0" text="Date To" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="580.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="organizedDateTo" layoutX="509.0" layoutY="633.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="610.0" />
+                        <Label layoutX="336.0" layoutY="751.0" prefHeight="30.0" prefWidth="175.0" text="Number of Participants" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="680.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="organizedNumberOfParticipants" layoutX="75.0" layoutY="925.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="710.0" />
+                        <Label layoutX="453.0" layoutY="695.0" prefHeight="30.0" prefWidth="111.0" text="Academic Year" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="680.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="organizedAcademicYear" layoutX="621.0" layoutY="343.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="710.0" />
+                        <Label layoutX="62.0" layoutY="760.0" prefHeight="30.0" prefWidth="118.0" text="Target Audience" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="780.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox fx:id="organizedTargetAudience" layoutX="52.0" layoutY="783.0" prefHeight="37.0" prefWidth="731.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="810.0">
+                           <children>
+                              <JFXCheckBox fx:id="organizedHBOXUG" prefHeight="33.0" prefWidth="110.0" text="UG Students" />
+                              <JFXCheckBox fx:id="organizedHBOXPG" prefHeight="33.0" prefWidth="109.0" text="PG Students" />
+                              <JFXCheckBox fx:id="organizedHBOXPhD" prefHeight="33.0" prefWidth="166.0" text="Doctoral(PhD) Students" />
+                              <JFXCheckBox fx:id="organizedHBOXFaculties" prefHeight="33.0" prefWidth="89.0" text="Faculties" />
+                              <JFXCheckBox fx:id="organizedHBOXIndustryPersonnel" prefHeight="33.0" prefWidth="131.0" text="Industry Personnel" />
+                              <JFXCheckBox fx:id="organizedHBOXOther" prefHeight="33.0" prefWidth="92.0" text="Other" />
+                           </children>
+                        </HBox>
+                        <Label layoutX="28.0" layoutY="882.0" lineSpacing="5.0" prefHeight="30.0" prefWidth="232.0" text="Program Resource Details" textFill="#111111" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="880.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="25.0" layoutY="909.0" prefHeight="0.0" prefWidth="926.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="910.0" />
+                        <Label layoutX="56.0" layoutY="961.0" prefHeight="30.0" prefWidth="183.0" text="Name of Resource Person" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="960.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="organizedNameOfResourcePerson" layoutX="122.0" layoutY="999.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="990.0" />
+                        <Label layoutX="400.0" layoutY="960.0" prefHeight="30.0" prefWidth="77.0" text="Email Id(s)" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="1060.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="organizedMobileNo" layoutX="60.0" layoutY="1086.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1090.0" />
+                        <JFXTextField fx:id="organizedEmailId" layoutX="400.0" layoutY="990.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="1090.0" />
+                        <Label layoutX="43.0" layoutY="1065.0" prefHeight="30.0" prefWidth="111.0" text="Contact Details" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1060.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="organizedUpdateButton" layoutX="388.0" layoutY="1154.0" onAction="#organizedSaveButtonHandle" prefHeight="36.0" prefWidth="205.0" style="-fx-background-color: #6CCFD7;" text="Update" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="1150.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="71.0" prefWidth="977.0">
+                     <children>
+                        <Label layoutX="7.0" layoutY="9.0" lineSpacing="5.0" prefHeight="54.0" prefWidth="833.0" text="Organized: STTP / FDP / Seminar / Workshop" textFill="#111111">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                        <JFXToggleButton fx:id="organizedEditButton" layoutX="655.0" layoutY="11.0" onAction="#organizedEdit" prefHeight="60.0" prefWidth="102.0" text="Edit">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane fx:id="publicationRetrivalPane" prefHeight="1100.0" prefWidth="1000.0">
+               <children>
+                  <AnchorPane fx:id="publicationRetrivalAnchorPane" layoutY="2.0" prefHeight="1100.0" prefWidth="1000.0" style="-fx-background-color: #fff;">
+                     <children>
+                        <Separator layoutX="3.0" layoutY="87.0" prefHeight="3.0" prefWidth="960.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="70.0" />
+                        <AnchorPane layoutX="10.0" layoutY="73.0" prefHeight="824.0" prefWidth="970.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="73.0">
+                           <children>
+                              <Label layoutX="99.0" layoutY="72.0" prefHeight="26.0" prefWidth="230.0" text="Authors' Name" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="50.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationAuthorsName" layoutX="107.0" layoutY="101.0" prefHeight="25.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="80.0" />
+                              <Label layoutX="60.0" layoutY="153.0" prefHeight="26.0" prefWidth="196.0" text="Correspondence Author(s) " AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="153.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationCorrespondenceAuthors" layoutX="60.0" layoutY="183.0" prefHeight="26.0" prefWidth="286.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="183.0" />
+                              <Label layoutX="425.0" layoutY="155.0" prefHeight="26.0" prefWidth="230.0" text="Publication Type" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="155.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="publicationPublicationType" layoutX="407.0" layoutY="185.0" onAction="#enabledTypeOther" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="185.0" />
+                              <Label fx:id="publicationPublicationTypeOtherLabel" layoutX="739.0" layoutY="151.0" prefHeight="26.0" prefWidth="230.0" text="Publication Type (Other)" AnchorPane.leftAnchor="739.0" AnchorPane.topAnchor="151.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationPublicationTypeOther" layoutX="739.0" layoutY="181.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="739.0" AnchorPane.topAnchor="181.0" />
+                              <Label layoutX="48.0" layoutY="235.0" prefHeight="26.0" prefWidth="230.0" text="Title of Paper" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="250.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationTitleOfPaper" layoutX="107.0" layoutY="207.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="280.0" />
+                              <Label layoutX="88.0" layoutY="332.0" prefHeight="26.0" prefWidth="230.0" text="Name of Journal / Conference" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="350.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationNameOfJournal" layoutX="107.0" layoutY="273.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="380.0" />
+                              <Label layoutX="67.0" layoutY="441.0" prefHeight="26.0" prefWidth="230.0" text="Name of Publisher / Organizer" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="450.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationNameOfPublisherOrganizer" layoutX="107.0" layoutY="339.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="480.0" />
+                              <Label layoutX="26.0" layoutY="534.0" prefHeight="26.0" prefWidth="230.0" text="Link / URL of Paper (if available)" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="550.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationLink" layoutX="107.0" layoutY="405.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="580.0" />
+                              <Label layoutX="79.0" layoutY="626.0" prefHeight="26.0" prefWidth="230.0" text="Month &amp; Year of Publication" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="650.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="publicationMonthYear" layoutX="107.0" layoutY="471.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="680.0" />
+                              <Label layoutX="453.0" layoutY="653.0" prefHeight="26.0" prefWidth="230.0" text="Academic Year" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="650.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXComboBox fx:id="publicationAcademicYear" layoutX="407.0" layoutY="471.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="680.0" />
+                              <Label layoutX="101.0" layoutY="736.0" prefHeight="26.0" prefWidth="230.0" text="Page No. (From ... To)" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="750.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationPageNoFrom" layoutX="107.0" layoutY="537.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="780.0" />
+                              <Label layoutX="491.0" layoutY="742.0" prefHeight="26.0" prefWidth="198.0" text="ISSN / ISBN / DOI Number" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="750.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationISSN" layoutX="407.0" layoutY="537.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="780.0" />
+                              <Label layoutX="743.0" layoutY="730.0" prefHeight="26.0" prefWidth="192.0" text=" Volume and Issue Number" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="750.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationVolumeIssueNumber" layoutX="707.0" layoutY="537.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="780.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="902.0" prefHeight="1157.0" prefWidth="970.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="902.0">
+                           <children>
+                              <Label layoutX="30.0" layoutY="-1.0" prefHeight="18.0" prefWidth="152.0" text="Event Details" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="30.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefHeight="0.0" prefWidth="940.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="60.0" />
+                              <Label layoutX="60.0" layoutY="105.0" prefHeight="26.0" prefWidth="52.0" text="Venue" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="110.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextArea fx:id="publicationAddress" layoutX="60.0" layoutY="131.0" prefHeight="76.0" prefWidth="515.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="140.0" />
+                              <Label layoutX="63.0" layoutY="258.0" prefHeight="26.0" prefWidth="77.0" text="Date From" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="260.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="publicationConferenceDateFrom" layoutX="60.0" layoutY="324.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="290.0" />
+                              <Label layoutX="381.0" layoutY="284.0" prefHeight="26.0" prefWidth="59.0" text="Date To" AnchorPane.leftAnchor="381.0" AnchorPane.topAnchor="260.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="publicationConferenceDateTo" layoutX="385.0" layoutY="324.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="385.0" AnchorPane.topAnchor="290.0" />
+                              <Label layoutX="55.0" layoutY="407.0" prefHeight="26.0" prefWidth="244.0" text=" Name of Funding Agency (if any)" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="360.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationNameOfFundingAgency" layoutX="60.0" layoutY="433.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="390.0" />
+                              <Label layoutX="60.0" layoutY="524.0" prefHeight="26.0" prefWidth="155.0" text=" Funds Received (Rs.) " AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="460.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationFundsReceived" layoutX="60.0" layoutY="552.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="490.0" />
+                              <Label layoutX="25.0" layoutY="567.0" prefHeight="30.0" prefWidth="77.0" text="Analysis" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="570.0">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefHeight="3.0" prefWidth="940.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="600.0" />
+                              <Label layoutX="269.0" layoutY="650.0" prefHeight="26.0" prefWidth="105.0" text="Impact Factor" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="650.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationImpactFactor" layoutX="236.0" layoutY="676.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="680.0" />
+                              <Label layoutX="328.0" layoutY="663.0" prefHeight="26.0" prefWidth="114.0" text="Citation Count" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="650.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationCitationCount" layoutX="311.0" layoutY="676.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="680.0" />
+                              <Label layoutX="614.0" layoutY="650.0" prefHeight="26.0" prefWidth="103.0" text="Scopus Index" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="650.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationScopusIndex" layoutX="614.0" layoutY="689.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="680.0" />
+                              <Label layoutX="67.0" layoutY="744.0" prefHeight="26.0" prefWidth="36.0" text="SNIP" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="750.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationSNIP" layoutX="42.0" layoutY="773.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="780.0" />
+                              <Label layoutX="328.0" layoutY="742.0" prefHeight="26.0" prefWidth="70.0" text="SJR Rank" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="750.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationSJRRank" layoutX="305.0" layoutY="768.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="780.0" />
+                              <Label layoutX="614.0" layoutY="742.0" prefHeight="26.0" prefWidth="84.0" text="Indexed by" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="850.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <HBox fx:id="publicationHBOXIndexedBy" layoutX="57.0" layoutY="902.0" prefHeight="26.0" prefWidth="521.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="880.0">
+                                 <children>
+                                    <JFXCheckBox fx:id="publicationHBOXScopus" prefHeight="26.0" prefWidth="94.0" text="Scopus" />
+                                    <JFXCheckBox fx:id="publicationHBOXWebofScience" prefHeight="26.0" prefWidth="122.0" text="Web-of-Science" />
+                                    <JFXCheckBox fx:id="publicationHBOXGoogleScholar" prefHeight="26.0" prefWidth="117.0" text="Google-Scholar" />
+                                    <JFXCheckBox fx:id="publicationHBOXOther" prefHeight="26.0" prefWidth="77.0" text="Other" />
+                                    <JFXCheckBox fx:id="publicationHBOXNotIndexed" prefHeight="26.0" prefWidth="110.0" text="Not-Indexed" />
+                                 </children>
+                              </HBox>
+                              <Label layoutX="55.0" layoutY="949.0" prefHeight="26.0" prefWidth="143.0" text=" Indexed by (other)" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="950.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="publicationIndexedByOther" layoutX="55.0" layoutY="979.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="980.0" />
+                              <JFXButton fx:id="publicationUpdateButton" layoutX="400.0" layoutY="1078.0" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Update" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="1078.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="70.0" prefWidth="769.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" lineSpacing="5.0" text="Publication" textFill="#111111">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                        <JFXToggleButton fx:id="eduWorkingEditButton1" layoutX="180.0" layoutY="8.0" onAction="#publicationEdit" prefHeight="60.0" prefWidth="102.0" text="Edit">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

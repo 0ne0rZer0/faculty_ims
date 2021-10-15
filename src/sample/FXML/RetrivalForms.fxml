@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="retrivalScrollPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="3000.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RetrivalForms">
+   <content>
+      <AnchorPane maxHeight="800" maxWidth="-Infinity" prefHeight="1100.0" prefWidth="1280.0">
+         <children>
+             <Pane fx:id="interactionPane" layoutY="-14.0" prefHeight="1100.0" prefWidth="1280.0">
+                 <children>
+                     <AnchorPane prefHeight="1000.0" prefWidth="1280.0" style="-fx-background-color: #fff;">
+                     <Separator layoutX="302.0" layoutY="86.0" prefHeight="0.0" prefWidth="956.0" />
+                     <TableView fx:id="interactionRetriveTable" layoutX="326.0" layoutY="210.0" prefHeight="315.0" prefWidth="981.0">
+                         <columns>
+                             <TableColumn fx:id="interactionRTableParticulars" prefWidth="361.0" text="Particluars" />
+                             <TableColumn fx:id="interactionRTableRole" prefWidth="194.0" text="Role" />
+                             <TableColumn fx:id="interactionRTableDate" prefWidth="139.0" text="Date" />
+                             <TableColumn fx:id="interactionRTableYear" prefWidth="149.0" text="Academic Year" />
+                         </columns></TableView>
+                     <Label layoutX="312.0" layoutY="39.0" lineSpacing="5.0" prefHeight="40.0" prefWidth="814.0" text="Interaction With the Outside World" textFill="#111111">
+                         <font>
+                             <Font size="32.0" />
+                         </font>
+                     </Label>
+                     <JFXButton fx:id="interactionAddMore" layoutX="715.0" layoutY="560.0" onAction="#interactionAddMore" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Add More" />
+                     </AnchorPane>
+                 </children>
+             </Pane>
+             <Pane fx:id="publicationPane" layoutX="301.0" layoutY="-1.0" prefHeight="1101.0" prefWidth="979.0">
+                 <children>
+                     <AnchorPane prefHeight="1794.0" prefWidth="1280.0" style="-fx-background-color: #fff;">
+                         <Label layoutX="31.0" layoutY="36.0" lineSpacing="5.0" text="Publication Details" textFill="#111111">
+                             <font>
+                                 <Font size="32.0" />
+                             </font>
+                         </Label>
+                         <Separator layoutX="14.0" layoutY="85.0" prefHeight="0.0" prefWidth="956.0" />
+                         <TableView fx:id="publicationRetriveTable" layoutX="22.0" layoutY="210.0" prefHeight="315.0" prefWidth="930.0">
+                             <columns>
+                                 <TableColumn fx:id="publicationRTableTypeColumn" prefWidth="509.0" text="Title Of Paper" />
+                                 <TableColumn fx:id="publicationRTableTitleColumn" prefWidth="156.0" text="Type Of Publication" />
+                                 <TableColumn fx:id="publicationRTableDateColumn" prefWidth="136.0" text="Date" />
+                           <TableColumn fx:id="publicationRTableYearColumn" prefWidth="131.0" text="Academic Year" />
+                             </columns>
+                         </TableView>
+                     <JFXButton fx:id="publicationAddMore" layoutX="401.0" layoutY="545.0" onAction="#publicationAddMore" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Add More" />
+                     </AnchorPane>
+                 </children>
+             </Pane>
+            <Pane fx:id="SPPUPane" prefHeight="1300.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane fx:id="sppuAnchorPane" cacheHint="SCALE" layoutX="302.0" layoutY="7.0" prefHeight="1250.0" prefWidth="1280.0" style="-fx-background-color: #fff;">
+                     <children>
+                         <JFXTextField fx:id="sppuEmployeeNumber" layoutX="86.0" layoutY="111.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="86.0" AnchorPane.topAnchor="111.0" />
+                         <Label layoutX="86.0" layoutY="85.0" prefHeight="26.0" prefWidth="147.0" text="Employee Number ">
+                             <font>
+                                 <Font name="System Bold" size="15.0" />
+                             </font>
+                         </Label>
+                        <Separator layoutY="53.0" prefHeight="3.0" prefWidth="964.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="60.0" />
+                        <Pane layoutX="29.0" layoutY="163.0" prefHeight="988.0" prefWidth="909.0">
+                           <children>
+                               <Label layoutX="2.0" prefHeight="18.0" prefWidth="152.0" text="PG Details">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="2.0" layoutY="30.0" prefHeight="0.0" prefWidth="860.0" />
+                              <DatePicker fx:id="sppuPgTeacherApprovalDate" layoutX="57.0" layoutY="105.0" prefHeight="26.0" prefWidth="200.0" />
+                              <JFXTextField fx:id="sppuReferenceNumber" layoutX="522.0" layoutY="101.0" prefHeight="26.0" prefWidth="200.0" />
+                              <Label layoutX="2.0" layoutY="172.0" prefHeight="30.0" prefWidth="170.0" text="Ph.D. Guide Details">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutX="2.0" layoutY="200.0" prefHeight="3.0" prefWidth="604.0" />
+                              <DatePicker fx:id="sppuPhdGuideRecognitionApprovalDate" layoutX="57.0" layoutY="268.0" prefHeight="26.0" prefWidth="200.0" />
+                              <JFXTextField fx:id="sppuPhdGuideApprovalReferenceNumber" layoutX="522.0" layoutY="266.0" prefHeight="27.0" prefWidth="200.0" />
+                              <JFXTextField fx:id="sppuNameOfAssociatedResearchCentre" layoutX="57.0" layoutY="378.0" prefHeight="26.0" prefWidth="700.0" />
+                              <Label layoutX="2.0" layoutY="444.0" prefHeight="18.0" prefWidth="152.0" text="STES Details">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Separator layoutY="472.0" prefHeight="0.0" prefWidth="860.0" />
+                              <JFXComboBox fx:id="sppuCurrentDesignation" layoutX="57.0" layoutY="551.0" prefHeight="26.0" prefWidth="200.0" />
+                              <JFXComboBox fx:id="sppuTypeOfAppointment" layoutX="522.0" layoutY="551.0" prefHeight="26.0" prefWidth="200.0" />
+                              <DatePicker fx:id="stesDateOfAppointmentOfCurrentDesignation" layoutX="57.0" layoutY="655.0" prefHeight="26.0" prefWidth="200.0" />
+                              <JFXTextField fx:id="sppuStesAppointmentOrderReferenceNumber" layoutX="522.0" layoutY="651.0" prefHeight="21.0" prefWidth="200.0" />
+                              <JFXComboBox fx:id="sppuStesCurrentApprovalCatagory" layoutX="57.0" layoutY="754.0" prefHeight="26.0" prefWidth="200.0" />
+                              <JFXTextField fx:id="sppuApprovalReferenceNumber" layoutX="522.0" layoutY="755.0" prefHeight="25.0" prefWidth="200.0" />
+                              <DatePicker fx:id="sppuDateOfApprovalOfCurrentDesignation" layoutX="60.0" layoutY="855.0" prefHeight="26.0" prefWidth="200.0" />
+                              <Label layoutX="522.0" layoutY="824.0" prefHeight="23.0" prefWidth="223.0" text="Previous Appointment(If Any) :">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <HBox fx:id="sppuHBOXPerviousAppointment" layoutX="522.0" layoutY="854.0" prefHeight="27.0" prefWidth="386.0">
+                                 <children>
+                                    <JFXRadioButton fx:id="sppuHBOXAssistnatProfessor" prefHeight="31.0" prefWidth="163.0" text="Assistant Professor">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="grp1" />
+                                       </toggleGroup>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="sppuHBOXAssociateProfessor" prefHeight="29.0" prefWidth="174.0" text="Associate Professor" toggleGroup="$grp1" />
+                                    <JFXRadioButton fx:id="sppuHBOXNo" prefHeight="27.0" prefWidth="52.0" text="No" toggleGroup="$grp1" />
+                                 </children>
+                              </HBox>
+                              <Label layoutX="57.0" layoutY="75.0" prefHeight="26.0" prefWidth="234.0" text="SPPU PG Teacher Approval Date">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="522.0" layoutY="75.0" prefHeight="26.0" prefWidth="234.0" text="Reference Number">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="57.0" layoutY="238.0" prefHeight="26.0" prefWidth="318.0" text="SPPU PhD Guide Recognition Approval Date">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="522.0" layoutY="238.0" prefHeight="26.0" prefWidth="318.0" text="PhD Guide Approval Reference No">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="57.0" layoutY="348.0" prefHeight="26.0" prefWidth="266.0" text="Name of Associated Research Centre">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="57.0" layoutY="825.0" prefHeight="26.0" prefWidth="329.0" text="SPPU date of approval of Current Designation">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="522.0" layoutY="725.0" prefHeight="26.0" prefWidth="266.0" text="SPPU Approval Reference No">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="57.0" layoutY="725.0" prefHeight="26.0" prefWidth="266.0" text="SPPU Current Approval Catagory">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="522.0" layoutY="625.0" prefHeight="26.0" prefWidth="314.0" text="STES Appointment Order Reference No">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="57.0" layoutY="625.0" prefHeight="26.0" prefWidth="313.0" text="Date of appointment of current Designation">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="522.0" layoutY="525.0" prefHeight="26.0" prefWidth="199.0" text="Type of Appointment">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="57.0" layoutY="525.0" prefHeight="26.0" prefWidth="201.0" text="Current Designation">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="sppuUpdateButton" layoutX="354.0" layoutY="922.0" onAction="#sppuSaveButton" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Update" />
+                           </children>
+                        </Pane>
+                           </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="66.0" prefWidth="770.0">
+                     <children>
+                        <Label layoutX="312.0" layoutY="10.0" lineSpacing="5.0" prefHeight="30.0" prefWidth="215.0" text="SPPU Details" textFill="#111111">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                        <JFXToggleButton fx:id="sppuEditButton" layoutX="540.0" layoutY="4.0" onAction="#sppuEdit" text="Edit Details">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane fx:id="attendedPane" layoutX="300.0" prefHeight="1100.0" prefWidth="980.0">
+               <children>
+                  <AnchorPane prefHeight="1000.0" prefWidth="1280.0" style="-fx-background-color: #fff;">
+                  <Label layoutX="32.0" layoutY="36.0" lineSpacing="5.0" prefHeight="46.0" prefWidth="825.0" text="Attended : STTP / FDP / Seminar / Workshop / Conference" textFill="#111111">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="23.0" layoutY="86.0" prefHeight="0.0" prefWidth="956.0" />
+                  <TableView fx:id="attendedRetriveTable" layoutX="22.0" layoutY="210.0" prefHeight="315.0" prefWidth="930.0">
+                     <columns>
+                        <TableColumn fx:id="attendedRTableTitleColumn" prefWidth="509.0" text="Title Of Programme" />
+                        <TableColumn fx:id="attendedRTableTypeColumn" prefWidth="156.0" text="Type Of Programme" />
+                        <TableColumn fx:id="attendedRTableDateColumn" prefWidth="136.0" text="Date" />
+                           <TableColumn fx:id="attendedRTableYearColumn" prefWidth="114.0" text="Academic Year" />
+                     </columns>
+                  </TableView>
+                  </AnchorPane>
+                  <JFXButton fx:id="attendedAddMore" layoutX="411.0" layoutY="555.0" onAction="#attendedAddMore" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Add More" />
+               </children>
+            </Pane>
+            <Pane fx:id="organizedPane" prefHeight="1100.0" prefWidth="1280.0">
+               <children>
+                  <AnchorPane prefHeight="1000.0" prefWidth="1280.0" style="-fx-background-color: #fff;">
+                     <Separator layoutX="302.0" layoutY="86.0" prefHeight="0.0" prefWidth="956.0" />
+                     <TableView fx:id="organizedRetriveTable" layoutX="317.0" layoutY="210.0" prefHeight="315.0" prefWidth="930.0">
+                        <columns>
+                           <TableColumn fx:id="organizedRTableTitleColumn" prefWidth="535.0" text="Title Of Programme" />
+                           <TableColumn fx:id="organizedRTableTypeColumn" minWidth="0.0" prefWidth="149.0" text="Type Of Programme" />
+                           <TableColumn fx:id="organizedRTableDateColumn" prefWidth="128.0" text="Date" />
+                           <TableColumn fx:id="organizedRTableYearColumn" prefWidth="122.0" text="Academic Year" />
+                        </columns>
+                     </TableView>
+                     <Label layoutX="310.0" layoutY="32.0" lineSpacing="5.0" prefHeight="54.0" prefWidth="833.0" text="Organized: STTP / FDP / Seminar / Workshop" textFill="#111111">
+                        <font>
+                           <Font size="32.0" />
+                        </font>
+                     </Label>
+                     <JFXButton fx:id="organizedAddMore" layoutX="703.0" layoutY="570.0" onAction="#organizedAddMore" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Add More" />
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane fx:id="fundedPane" prefHeight="1100.0" prefWidth="1280.0">
+               <children>
+                  <AnchorPane prefHeight="1000.0" prefWidth="1280.0" style="-fx-background-color: #fff;">
+                  <Separator layoutX="302.0" layoutY="86.0" prefHeight="0.0" prefWidth="956.0" />
+                  <TableView fx:id="fundedRetriveTable" layoutX="330.0" layoutY="210.0" prefHeight="315.0" prefWidth="930.0">
+                     <columns>
+                        <TableColumn fx:id="fundedRTableTitleColumn" prefWidth="438.0" text="Title Of Research Product" />
+                        <TableColumn fx:id="fundedRTableSponsoringColumn" prefWidth="252.0" text="Sponsoring Agency" />
+                        <TableColumn fx:id="fundedRTableDateColumn" prefWidth="111.0" text="Date" />
+                           <TableColumn fx:id="fundedRTableYearColumn" prefWidth="118.0" text="Academic Year" />
+                     </columns></TableView>
+                  <Label layoutX="314.0" layoutY="33.0" lineSpacing="5.0" prefHeight="34.0" prefWidth="466.0" text="Funded Research Projects Details" textFill="#111111">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                     <JFXButton fx:id="fundedAddMore" layoutX="713.0" layoutY="574.0" onAction="#fundedAddMore" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Add More" />
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane fx:id="guestPane" prefHeight="1100.0" prefWidth="1280.0">
+               <children>
+                  <AnchorPane prefHeight="1000.0" prefWidth="1280.0" style="-fx-background-color: #fff;">
+                  <Separator layoutX="302.0" layoutY="86.0" prefHeight="0.0" prefWidth="956.0" />
+                  <TableView fx:id="guestRetriveTable" layoutX="325.0" layoutY="210.0" prefHeight="315.0" prefWidth="930.0">
+                     <columns>
+                        <TableColumn fx:id="guestRTableTopic" prefWidth="413.0" text="Topic" />
+                        <TableColumn fx:id="guestRTableName" prefWidth="263.0" text="Name Of Resource Person" />
+                        <TableColumn fx:id="guestRTableDate" prefWidth="125.0" text="Date" />
+                           <TableColumn fx:id="guestRTableYearColumn" prefWidth="121.0" text="Academic Year" />
+                     </columns></TableView>
+                  <Label layoutX="311.0" layoutY="32.0" lineSpacing="5.0" prefHeight="54.0" prefWidth="353.0" text="Guest Lectures Arranged" textFill="#111111">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                     <JFXButton fx:id="guestAddMore" layoutX="677.0" layoutY="564.0" onAction="#guestAddMore" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Add More" />
+                  </AnchorPane>
+               </children></Pane>
+             <Pane fx:id="educationalPane" prefHeight="1100.0" prefWidth="1280.0">
+                 <children>
+                  <AnchorPane layoutX="298.0" prefHeight="2448.0" prefWidth="1332.0" style="-fx-background-color: #fff;">
+                     <children>
+                             <TableView fx:id="educationalRetriveTable" layoutX="82.0" layoutY="1907.0" prefHeight="231.0" prefWidth="808.0">
+                                 <columns>
+                                     <TableColumn fx:id="eduRFieldColumn" prefWidth="120.0" text="Field" />
+                                     <TableColumn fx:id="eduRNameColumn" prefWidth="392.0" text="Name Of Institute/Industry" />
+                                     <TableColumn fx:id="eduRPositionColumn" prefWidth="173.0" text="Position" />
+                              <TableColumn fx:id="eduRDateColumn" prefWidth="122.0" text="Date" />
+                                 </columns>
+                             </TableView>
+                        <Separator layoutX="21.0" layoutY="1805.0" prefHeight="3.0" prefWidth="1020.0" />
+                        <Label layoutX="21.0" layoutY="1808.0" lineSpacing="5.0" prefHeight="58.0" prefWidth="554.0" text="Working Experience" textFill="#111111">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="21.0" layoutY="1876.0" prefHeight="3.0" prefWidth="1020.0" />
+                         <JFXButton fx:id="workAddMore" layoutX="390.0" layoutY="2178.0" onAction="#workAddMore" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Add More" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="2178.0" />
+                     </children></AnchorPane>
+                     <AnchorPane fx:id="educationalAnchorPane" cacheHint="SCALE" layoutX="302.0" layoutY="4.0" prefHeight="1738.0" prefWidth="1280.0" style="-fx-background-color: #fff;">
+                     <children>
+                             <Separator layoutX="14.0" layoutY="66.0" prefHeight="3.0" prefWidth="1020.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="70.0" />
+                             <AnchorPane layoutX="-1.0" layoutY="91.0" prefHeight="390.0" prefWidth="967.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="91.0">
+                                 <children>
+                                     <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="223.0" text="Under Graduate Details" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0">
+                                         <font>
+                                             <Font size="20.0" />
+                                         </font>
+                                     </Label>
+                                     <Separator layoutX="14.0" layoutY="44.0" prefHeight="0.0" prefWidth="950.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="45.0" />
+                                     <Label layoutX="84.0" layoutY="100.0" prefHeight="30.0" prefWidth="83.0" text="Degree" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="90.0">
+                                         <font>
+                                             <Font name="System Bold" size="15.0" />
+                                         </font>
+                                     </Label>
+                                     <JFXComboBox fx:id="eduUGDegree" layoutX="123.0" layoutY="75.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="120.0">
+                                         <tooltip>
+                                             <Tooltip text="Please Select Degree" />
+                                         </tooltip>
+                                     </JFXComboBox>
+                                     <Label layoutX="392.0" layoutY="75.0" prefHeight="30.0" prefWidth="115.0" text="Specialization" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="90.0">
+                                         <font>
+                                             <Font name="System Bold" size="15.0" />
+                                         </font>
+                                     </Label>
+                                     <JFXComboBox fx:id="eduUGSpecialization" layoutX="427.0" layoutY="75.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="120.0" />
+                                     <Label layoutX="740.0" layoutY="90.0" prefHeight="30.0" prefWidth="83.0" text="Class" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="90.0">
+                                         <font>
+                                             <Font name="System Bold" size="15.0" />
+                                         </font>
+                                     </Label>
+                                     <JFXComboBox fx:id="eduUGClass" layoutX="715.0" layoutY="77.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="120.0" />
+                                     <Label layoutX="52.0" layoutY="180.0" prefHeight="30.0" prefWidth="83.0" text="University" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="190.0">
+                                         <font>
+                                             <Font name="System Bold" size="15.0" />
+                                         </font>
+                                     </Label>
+                                     <JFXTextField fx:id="eduUGUniversity" layoutX="122.0" layoutY="149.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="220.0" />
+                                     <Label layoutX="408.0" layoutY="180.0" prefHeight="30.0" prefWidth="146.0" text="Percentage/CGPA" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="190.0">
+                                         <font>
+                                             <Font name="System Bold" size="15.0" />
+                                         </font>
+                                     </Label>
+                                     <JFXTextField fx:id="eduUGPercentage" layoutX="426.0" layoutY="149.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="220.0" />
+                                     <Label layoutX="43.0" layoutY="279.0" prefHeight="30.0" prefWidth="206.0" text=" Month and Year of Passing" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="290.0">
+                                         <font>
+                                             <Font name="System Bold" size="15.0" />
+                                         </font>
+                                     </Label>
+                                     <DatePicker fx:id="eduUGYearPassing" layoutX="122.0" layoutY="215.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="320.0" />
+                                 </children>
+                             </AnchorPane>
+                             <AnchorPane layoutY="469.0" prefHeight="489.0" prefWidth="966.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="469.0">
+                                 <children>
+                                     <Label layoutX="14.0" layoutY="26.0" prefHeight="30.0" prefWidth="218.0" text="Post Graduate Details" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0">
+                                         <font>
+                                             <Font size="20.0" />
+                                         </font>
+                                     </Label>
+                                     <Separator layoutX="14.0" layoutY="55.0" prefHeight="0.0" prefWidth="950.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="45.0" />
+                                     <Label prefHeight="30.0" prefWidth="83.0" text="Degree" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="90.0">
+                                         <font>
+                                             <Font name="System Bold" size="15.0" />
+                                         </font>
+                                     </Label>
+                                     <JFXComboBox fx:id="eduPGDegree" layoutX="112.0" layoutY="101.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="120.0" />
+                                     <Label prefHeight="30.0" prefWidth="115.0" text="Specialization" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="90.0">
+                                         <font>
+                                             <Font name="System Bold" size="15.0" />
+                                         </font>
+                                     </Label>
+                                     <JFXComboBox fx:id="eduPGSpecialization" layoutX="413.0" layoutY="93.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="120.0" />
+                                     <Label prefHeight="30.0" prefWidth="83.0" text="Class" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="90.0">
+                                         <font>
+                                             <Font name="System Bold" size="15.0" />
+                                         </font>
+                                     </Label>
+                                     <JFXComboBox fx:id="eduPGClass" layoutX="740.0" layoutY="120.0" prefHeight="26.0" prefWidth="211.0" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="120.0" />
+                                     <Label prefHeight="30.0" prefWidth="83.0" text="University" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="190.0">
+                                         <font>
+                                             <Font name="System Bold" size="15.0" />
+                                         </font>
+                                     </Label>
+                                     <JFXTextField fx:id="eduPGUniversity" layoutX="112.0" layoutY="174.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="220.0" />
+                                     <Label prefHeight="30.0" prefWidth="146.0" text="Percentage/CGPA" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="190.0">
+                                         <font>
+                                             <Font name="System Bold" size="15.0" />
+                                         </font>
+                                     </Label>
+                                     <JFXTextField fx:id="eduPGPercentage" layoutX="416.0" layoutY="174.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="220.0" />
+                                     <Label prefHeight="30.0" prefWidth="206.0" text=" Month and Year of Passing" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="290.0">
+                                         <font>
+                                             <Font name="System Bold" size="15.0" />
+                                         </font>
+                                     </Label>
+                                     <DatePicker fx:id="eduPGYearPassing" layoutX="112.0" layoutY="240.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="320.0" />
+                                     <Label layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="185.0" text="PG Completion Status" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="390.0">
+                                         <font>
+                                             <Font name="System Bold" size="15.0" />
+                                         </font>
+                                     </Label>
+                                     <JFXComboBox fx:id="eduPGCompletionStatus" layoutX="112.0" layoutY="303.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="420.0" />
+                                 </children>
+                             </AnchorPane>
+                             <Label layoutX="25.0" layoutY="966.0" prefHeight="18.0" prefWidth="152.0" text="Ph.D. Details" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="966.0">
+                                 <font>
+                                     <Font size="20.0" />
+                                 </font>
+                             </Label>
+                             <JFXToggleButton fx:id="eduEnabledPHD" layoutX="137.0" layoutY="951.0" onAction="#enablePHD" prefHeight="44.0" prefWidth="168.0" text="AddDetails" AnchorPane.leftAnchor="137.0" AnchorPane.topAnchor="951.0" />
+                             <Separator layoutX="10.0" layoutY="1001.0" prefHeight="0.0" prefWidth="922.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="1001.0" />
+                             <Label layoutX="60.0" layoutY="1041.0" prefHeight="30.0" prefWidth="115.0" text="Specialization" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1041.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="eduPHDSpecialization" layoutX="60.0" layoutY="1071.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1071.0" />
+                             <Label layoutX="400.0" layoutY="1041.0" prefHeight="30.0" prefWidth="77.0" text="Domain" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="1041.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="eduPHDDomain" layoutX="400.0" layoutY="1071.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="1071.0" />
+                             <Label layoutX="60.0" layoutY="1141.0" prefHeight="30.0" prefWidth="77.0" text="University" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1141.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="eduPHDUniversity" layoutX="60.0" layoutY="1171.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1171.0" />
+                             <Label layoutX="60.0" layoutY="1241.0" prefHeight="30.0" prefWidth="232.0" text="Month and Year Of Admission" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1241.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <DatePicker fx:id="eduPHDYearAdmission" layoutX="60.0" layoutY="1271.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1271.0" />
+                             <Label layoutX="60.0" layoutY="1341.0" prefHeight="30.0" prefWidth="159.0" text="Completion Status" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1341.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXComboBox fx:id="eduPHDCompletionStatus" layoutX="60.0" layoutY="1371.0" onAction="#enablePHDDateCompletion" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1371.0" />
+                             <Label layoutX="400.0" layoutY="1341.0" prefHeight="30.0" prefWidth="225.0" text="Month and Year Of Admission" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="1341.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <DatePicker fx:id="eduPHDYearCompletion" layoutX="400.0" layoutY="1371.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="1371.0" />
+                             <Separator layoutX="9.0" layoutY="1617.0" prefHeight="3.0" prefWidth="1020.0" AnchorPane.leftAnchor="9.0" AnchorPane.topAnchor="1617.0" />
+                             <Label layoutX="18.0" layoutY="1453.0" prefHeight="18.0" prefWidth="152.0" text="SCOE " AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="1453.0">
+                                 <font>
+                                     <Font size="20.0" />
+                                 </font>
+                             </Label>
+                             <Separator layoutX="-4.0" layoutY="1488.0" prefHeight="3.0" prefWidth="950.0" AnchorPane.leftAnchor="-4.0" AnchorPane.topAnchor="1488.0" />
+                             <Label layoutX="46.0" layoutY="1533.0" prefHeight="30.0" prefWidth="163.0" text="Date of joining SCOE" AnchorPane.leftAnchor="46.0" AnchorPane.topAnchor="1533.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <DatePicker fx:id="eduSCOEJoiningDate" layoutX="46.0" layoutY="1563.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="46.0" AnchorPane.topAnchor="1563.0" />
+                             <JFXButton fx:id="eduUpdateButton" layoutX="371.0" layoutY="1671.0" onAction="#educationalSaveButton" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Update" AnchorPane.leftAnchor="371.0" AnchorPane.topAnchor="1671.0" />
+                         </children>
+                     </AnchorPane>
+                  <AnchorPane prefHeight="73.0" prefWidth="970.0">
+                     <children>
+                        <Label layoutX="310.0" layoutY="26.0" lineSpacing="5.0" text="Educational Details" textFill="#111111">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                        <JFXToggleButton fx:id="eduEditButton" layoutX="602.0" layoutY="20.0" onAction="#educationalEdit" prefHeight="60.0" prefWidth="166.0" text="Edit Details">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </AnchorPane>
+                 </children>
+             </Pane>
+             <Pane fx:id="personalPane" prefHeight="1100.0" prefWidth="1280.0">
+                 <children>
+                     <AnchorPane fx:id="personalAnchorPane" cacheHint="SCALE" layoutX="302.0" layoutY="7.0" prefHeight="1250.0" prefWidth="1280.0" style="-fx-background-color: #fff;">
+                         <children>
+                             <Separator layoutX="322.0" layoutY="103.0" prefHeight="3.0" prefWidth="1020.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="70.0" />
+                             <Label layoutX="60.0" layoutY="129.0" prefHeight="30.0" prefWidth="83.0" text="First Name" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="129.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalFirstName" layoutX="60.0" layoutY="159.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="159.0" />
+                             <Label layoutX="400.0" layoutY="129.0" prefHeight="30.0" prefWidth="210.0" text="Middle Name" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="129.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalMiddleName" layoutX="400.0" layoutY="159.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="159.0" />
+                             <Label layoutX="713.0" layoutY="118.0" prefHeight="30.0" prefWidth="83.0" text="Last Name" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="120.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalLastName" layoutX="1025.0" layoutY="150.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="150.0" />
+                             <Label layoutX="60.0" layoutY="229.0" prefHeight="30.0" prefWidth="210.0" text="Mothers Name" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="229.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalMothersName" layoutX="60.0" layoutY="259.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="259.0" />
+                             <Label layoutX="400.0" layoutY="229.0" prefHeight="30.0" prefWidth="210.0" text="Religion" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="229.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalReligion" layoutX="400.0" layoutY="259.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="259.0" />
+                             <Label layoutX="1025.0" layoutY="235.0" prefHeight="30.0" prefWidth="210.0" text="Caste" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="220.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalCaste" layoutX="1025.0" layoutY="199.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="740.0" AnchorPane.topAnchor="250.0" />
+                             <Label layoutX="60.0" layoutY="329.0" prefHeight="30.0" prefWidth="210.0" text="Date of birth" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="329.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <DatePicker fx:id="personalDateOfBirth" layoutX="60.0" layoutY="359.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="359.0" />
+                             <Label layoutX="400.0" layoutY="329.0" prefHeight="30.0" prefWidth="210.0" text="Category" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="329.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXComboBox fx:id="personalCategory" layoutX="400.0" layoutY="359.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="359.0" />
+                             <Label layoutX="60.0" layoutY="408.0" prefHeight="30.0" prefWidth="219.0" text="Gender" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="408.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <HBox layoutX="54.0" layoutY="438.0" prefHeight="23.0" prefWidth="274.0" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="438.0">
+                                 <children>
+                                     <JFXRadioButton fx:id="Male" prefHeight="18.0" prefWidth="91.0" text="Male" textAlignment="RIGHT">
+                                         <toggleGroup>
+                                             <ToggleGroup fx:id="Gender11" />
+                                         </toggleGroup>
+                                     </JFXRadioButton>
+                                     <JFXRadioButton fx:id="Female" prefHeight="18.0" prefWidth="91.0" text="Female" textAlignment="RIGHT" toggleGroup="$Gender11" />
+                                     <JFXRadioButton fx:id="Other" prefHeight="18.0" prefWidth="91.0" text="Other" textAlignment="RIGHT" toggleGroup="$Gender11" />
+                                 </children>
+                                 <padding>
+                                     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                             </HBox>
+                             <Label layoutX="25.0" layoutY="501.0" prefHeight="18.0" prefWidth="152.0" text="Contact Details" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="501.0">
+                                 <font>
+                                     <Font size="20.0" />
+                                 </font>
+                             </Label>
+                             <Separator layoutX="-316.0" layoutY="500.0" prefHeight="3.0" prefWidth="950.0" AnchorPane.bottomAnchor="1028.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="416.0" AnchorPane.topAnchor="530.0" />
+                             <Label layoutX="417.0" layoutY="320.0" prefHeight="30.0" prefWidth="210.0" text="Mobile Number" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="555.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalMobileNumber" layoutX="413.0" layoutY="496.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="585.0" />
+                             <Label layoutX="712.0" layoutY="550.0" prefHeight="30.0" prefWidth="210.0" text="Personal Email" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="555.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalPersonalEmail" layoutX="688.0" layoutY="494.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="585.0" />
+                             <Label layoutX="427.0" layoutY="330.0" prefHeight="30.0" prefWidth="59.0" text="Address" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="650.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextArea fx:id="personalAddress" layoutX="412.0" layoutY="680.0" prefHeight="76.0" prefWidth="540.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="680.0" />
+                             <Label layoutX="326.0" layoutY="788.0" prefHeight="18.0" prefWidth="152.0" text="Bank Details" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="790.0">
+                                 <font>
+                                     <Font size="20.0" />
+                                 </font>
+                             </Label>
+                             <Separator layoutX="322.0" layoutY="713.0" prefHeight="2.0" prefWidth="950.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="820.0" />
+                             <Label layoutX="437.0" layoutY="340.0" prefHeight="30.0" prefWidth="210.0" text="Aadhar Number" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="850.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalAadharNumber" layoutX="415.0" layoutY="844.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="880.0" />
+                             <Label layoutX="447.0" layoutY="350.0" prefHeight="30.0" prefWidth="210.0" text="PAN Card Number" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="850.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalPANNumber" layoutX="711.0" layoutY="844.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="880.0" />
+                             <Label layoutX="447.0" layoutY="350.0" prefHeight="30.0" prefWidth="164.0" text="Bank Account Number" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="850.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalBankAccountNumber" layoutX="415.0" layoutY="914.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="880.0" />
+                             <Label layoutX="457.0" layoutY="360.0" prefHeight="30.0" prefWidth="210.0" text="IFSC Code" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="950.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalIFSCCode" layoutX="711.0" layoutY="914.0" prefHeight="25.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="980.0" />
+                             <Label layoutX="447.0" layoutY="350.0" prefHeight="30.0" prefWidth="210.0" text="MICR Code" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="950.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalMICRCode" layoutX="415.0" layoutY="984.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="980.0" />
+                             <Label layoutX="467.0" layoutY="370.0" prefHeight="30.0" prefWidth="210.0" text="PF Number" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="950.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalPFNumber" layoutX="711.0" layoutY="984.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="980.0" />
+                             <Label layoutX="61.0" layoutY="1150.0" prefHeight="30.0" prefWidth="131.0" text="Passport Number" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1050.0">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </Label>
+                             <JFXTextField fx:id="personalPassportNumber" layoutX="416.0" layoutY="1053.0" prefHeight="26.0" prefWidth="200.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1080.0" />
+                             <JFXButton fx:id="persoanlUpdateButton" layoutX="400.0" layoutY="1175.0" onAction="#personalSaveButtonHandle" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #6CCFD7;" text="Update" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="1180.0" />
+                             <Label layoutX="26.0" layoutY="80.0" prefHeight="18.0" prefWidth="152.0" text="Personal Details">
+                                 <font>
+                                     <Font size="20.0" />
+                                 </font>
+                             </Label>
+                             <Separator layoutX="14.0" layoutY="109.0" prefHeight="3.0" prefWidth="950.0" />
+                         </children>
+                     </AnchorPane>
+                     <AnchorPane prefHeight="76.0" prefWidth="1049.0">
+                         <children>
+                             <JFXToggleButton fx:id="personalEditButton" layoutX="622.0" layoutY="8.0" onAction="#personalEdit" prefHeight="60.0" prefWidth="170.0" text="Edit Details">
+                                 <font>
+                                     <Font name="System Bold" size="15.0" />
+                                 </font>
+                             </JFXToggleButton>
+                             <Label layoutX="308.0" layoutY="15.0" lineSpacing="5.0" prefHeight="47.0" prefWidth="335.0" text="Personal Information" textFill="#111111">
+                                 <font>
+                                     <Font size="32.0" />
+                                 </font>
+                             </Label>
+                         </children>
+                     </AnchorPane>
+                 </children>
+             </Pane>
+            <VBox fx:id="vBox" prefHeight="1300.0" prefWidth="300.0" style="-fx-background-color: #add2c9;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="226.0" fitWidth="276.0" pickOnBounds="true" style="-fx-translate-x: 13;">
+                     <image>
+                        <Image url="@../../res/sinhgad.png" />
+                     </image>
+                  </ImageView>
+                  <Separator blendMode="DARKEN" opacity="0.21" prefWidth="200.0" style="-fx-background-color: #000;" />
+                  <Button fx:id="personalCallButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#paneChange" prefHeight="55.0" prefWidth="300.0" style="-fx-background-color: #add2c9;" text="Personal Information">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/personal.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="educationalCallButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#paneChange" prefHeight="55.0" prefWidth="300.0" style="-fx-background-color: #add2c9;" text="Educational Information and Work Experience" wrapText="true">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/edu.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="sppuCallButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#paneChange" prefHeight="55.0" prefWidth="300.0" style="-fx-background-color: #add2c9;" text="Faculty Details of SPPU">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/SPPU.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="publicationCallButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#paneChange" prefHeight="55.0" prefWidth="300.0" style="-fx-background-color: #add2c9;" text="Publication">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/publication.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="attendedCallButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#paneChange" prefHeight="55.0" prefWidth="300.0" style="-fx-background-color: #add2c9;" text="Attended">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/attended.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="organizedCallButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#paneChange" prefHeight="55.0" prefWidth="300.0" style="-fx-background-color: #add2c9;" text="Organized">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/organized.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="outsideWorldCallButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#paneChange" prefHeight="55.0" prefWidth="300.0" style="-fx-background-color: #add2c9;" text="Interaction with the outside world" wrapText="true">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/Outside.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="fundedCallButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#paneChange" prefHeight="55.0" prefWidth="300.0" style="-fx-background-color: #add2c9;" text="Funded Research Projects" wrapText="true">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/Funds.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="guestLectureCallButton" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#paneChange" prefHeight="55.0" prefWidth="300.0" style="-fx-background-color: #add2c9;" text="Guest Lecture Arranged" wrapText="true">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/guest.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Separator opacity="0.21" prefHeight="0.0" prefWidth="297.0" style="-fx-background-color: #000000;" />
+                  <Button fx:id="logoutCallButton" alignment="CENTER" graphicTextGap="22.0" mnemonicParsing="false" onAction="#paneChange" prefHeight="75.0" prefWidth="243.0" style="-fx-background-color: #add2c9;" text="Log Out">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
