@@ -23,7 +23,8 @@ dynamic report generation for each user
 ![Login Screen](https://user-images.githubusercontent.com/43174511/137507322-d52f14f5-0836-4d69-b004-da6bfe5ae359.png)
 
 #Registration with validation
-![Form Filling](https://user-images.githubusercontent.com/43174511/137507545-96e28802-917f-42b0-9a84-17009be07020.png)
+
+![Registration Form 1st page](https://user-images.githubusercontent.com/43174511/138737844-88894e30-8535-4514-a5ea-bbfa092e461e.png)
 
 
 #About US
