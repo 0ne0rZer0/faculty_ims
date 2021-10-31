@@ -16,18 +16,18 @@ prevention of SQL Injection.
 • Designed and maintained the backend for the project which resulted in
 dynamic report generation for each user
 
-#ERD Diagram
+# ERD Diagram
 ![Complete ERD](https://user-images.githubusercontent.com/43174511/137507139-6af0cae8-eecd-4343-bce7-419904980eb4.jpeg)
 
-#LoginScreen
+# LoginScreen
 ![Login Screen](https://user-images.githubusercontent.com/43174511/137507322-d52f14f5-0836-4d69-b004-da6bfe5ae359.png)
 
-#Registration with validation
+# Registration with validation
 
 ![Registration Form 1st page](https://user-images.githubusercontent.com/43174511/138737844-88894e30-8535-4514-a5ea-bbfa092e461e.png)
 
 
-#About US
+# About US
 ![AboutUS](https://user-images.githubusercontent.com/43174511/137506181-c68dc63e-6045-428a-a098-9a0cadf22788.png)
 
 
